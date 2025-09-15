@@ -29,7 +29,7 @@
                 {{-- Item 1 --}}
                 <div class="col-12 col-md-6 col-lg-5 text-center">
                     <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/hero-slider-1.jpg') }}" class="img-fluid rounded-lg"
+                        <img src="{{ asset('assets/images/pantai/madasari-beach.jpg') }}" class="img-fluid rounded-lg"
                             alt="Pantai Madasari" style="object-fit: cover; height: 450px; width: 100%;">
                     </a>
                     <h5 class="fw-bold">Pantai Madasari</h5>
@@ -38,7 +38,7 @@
                 {{-- Item 2 --}}
                 <div class="col-12 col-md-6 col-lg-5 text-center">
                     <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" class="img-fluid rounded-lg"
+                        <img src="{{ asset('assets/images/pantai/pasir-putih.jpg') }}" class="img-fluid rounded-lg"
                             alt="Pasir Putih" style="object-fit: cover; height: 450px; width: 100%;">
                     </a>
                     <h5 class="fw-bold">Pasir Putih</h5>
@@ -49,7 +49,7 @@
                 {{-- Item 3 --}}
                 <div class="col-12 col-md-6 col-lg-5 text-center">
                     <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/hero-slider-3.jpg') }}" class="img-fluid rounded-lg"
+                        <img src="{{ asset('assets/images/pantai/the-arwana-2.jpg') }}" class="img-fluid rounded-lg"
                             alt="The Arnawa" style="object-fit: cover; height: 450px; width: 100%;">
                     </a>
                     <h5 class="fw-bold">The Arnawa</h5>
@@ -58,7 +58,7 @@
                 {{-- Item 4 --}}
                 <div class="col-12 col-md-6 col-lg-5 text-center">
                     <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/hero-slider-4.jpg') }}" class="img-fluid rounded-lg"
+                        <img src="{{ asset('assets/images/pantai/Green-Canyon-3.jpg') }}" class="img-fluid rounded-lg"
                             alt="Green Canyon" style="object-fit: cover; height: 450px; width: 100%;">
                     </a>
                     <h5 class="fw-bold">Green Canyon</h5>

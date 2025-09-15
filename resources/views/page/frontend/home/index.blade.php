@@ -78,15 +78,15 @@
                                     <div class="row mb-2">
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                                             <select name="" id="" class="form-control custom-select">
-                                                <option value="">Destination</option>
-                                                <option value="">Peru</option>
-                                                <option value="">Japan</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Brazil</option>
-                                                <option value="">United States</option>
-                                                <option value="">Israel</option>
-                                                <option value="">China</option>
-                                                <option value="">Russia</option>
+                                                <option value="">Cagar Alam</option>
+                                                <option value="">Green Canyon</option>
+                                                <option value="">Green Valley</option>
+                                                <option value="">Pantai Batu Hiu</option>
+                                                <option value="">Pantai Batu Karas</option>
+                                                <option value="">Pantai Karapyak</option>
+                                                <option value="">Pantai Madasari</option>
+                                                <option value="">Watersports</option>
+                                                <option value="">Wonder Hill Jojogan</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
@@ -116,12 +116,11 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="slides">
-                        <img src="{{ asset('assets/images/hero-slider-1.jpg') }}" alt="Image"
-                            class="img-fluid active">
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-3.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-4.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-5.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/pangandaran.jpg') }}" alt="Image" class="img-fluid active">
+                        <img src="{{ asset('assets/images/pantai/Green-Canyon.jpeg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('public/assets/images/pantai/pnd.png') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/madasari-beach.jpg') }}" alt="Image" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -135,9 +134,10 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">Our Services</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>Pangandaran offers a variety of professional and well-established tour services, providing
+                        customizable travel packages,
+                        adventure activities, and comprehensive arrangements for visitors to enjoy the best of the
+                        region.</p>
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -145,7 +145,7 @@
                     <div class="h-100">
                         <div class="frame h-100">
                             <div class="feature-img-bg h-100"
-                                style="background-image: url({{ asset('assets/images/hero-slider-1.jpg') }});"></div>
+                                style="background-image: url({{ asset('/assets/images/pantai/Villa.jpg') }});"></div>
                         </div>
                     </div>
                 </div>
@@ -155,8 +155,11 @@
                     <div class="feature-1 d-md-flex">
                         <div class="align-self-center">
                             <span class="flaticon-house display-4 text-primary"></span>
-                            <h3>Beautiful Condo</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+                            <h3>Beautiful Villa</h3>
+                            <p class="mb-0">Perfect for families, or couples who enjoy luxury and independence while
+                                travelling.
+                                Enjoy the space and privacy of these fully-furnished, self-standing mansions —
+                                travellers can cook, and lounge.</p>
                         </div>
                     </div>
 
@@ -164,7 +167,9 @@
                         <div class="align-self-center">
                             <span class="flaticon-restaurant display-4 text-primary"></span>
                             <h3>Restaurants & Cafe</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+                            <p class="mb-0">Pangandaran offers a rich variety of dining options, from local traditional
+                                warungs
+                                to stylish cafes and beachside restaurants, perfect for every taste and occasion.</p>
                         </div>
                     </div>
 
@@ -176,15 +181,19 @@
                         <div class="align-self-center">
                             <span class="flaticon-mail display-4 text-primary"></span>
                             <h3>Easy to Connect</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+                            <p class="mb-0">Pangandaran’s closest train stations are in Banjar (roughly to the north)
+                                and Sidareja
+                                (to the northeast)— both are on the same railway line and are around two hours by bus
+                                from Pangandaran.</p>
                         </div>
                     </div>
 
-                    <div class="feature-1 d-md-flex">
+                    <div class="feature-1 ">
                         <div class="align-self-center">
                             <span class="flaticon-phone-call display-4 text-primary"></span>
                             <h3>24/7 Support</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+                            <p class="mb-0">Supported by 24/7 customer support services and a professional expert team,
+                                ensuring maximum uptime and quick response to any issues that may arise.</p>
                         </div>
                     </div>
 
@@ -247,69 +256,69 @@
             <div class="owl-carousel owl-3-slider">
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-1.jpg') }}"
+                    <a class="media-thumb" href="{{ asset('assets/images/pantai/plaza-air-mancur-pangandaran.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>Pragser Wildsee</h3>
-                            <span class="location">Italy</span>
+                            <h3>Plaza Air Mancur Pangandaran</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-1.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/plaza-air-mancur-pangandaran.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-2.jpg') }}"
+                    <a class="media-thumb" href="{{ asset('assets/images/pantai/Wisata-Pantai-di-Pangandaran-1.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>Oia</h3>
-                            <span class="location">Greece</span>
+                            <h3>Pantai Pangandaran</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/Wisata-Pantai-di-Pangandaran-1.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-3.jpg') }}"
+                    <a class="media-thumb" href="{{ asset('assets/images/pantai/pantai-karapyak-sunda.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>Perhentian Islands</h3>
-                            <span class="location">Malaysia</span>
+                            <h3>Pantai Karapyak</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-3.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/pantai-karapyak-sunda.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-4.jpg') }}"
+                    <a class="media-thumb" href="{{ asset('assets/images/pantai/kampung-turis.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>Rialto Bridge</h3>
-                            <span class="location">Italy</span>
+                            <h3>Wisata Kampung Turis</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-4.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/kampung-turis.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-5.jpg') }}"
+                    <a class="media-thumb" href="{{ asset(path: 'assets/images/pantai/jojogan-.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>San Francisco, United States</h3>
-                            <span class="location">United States</span>
+                            <h3>Wonder Hill Jojogan</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-5.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/jojogan-.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
                 <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-1.jpg') }}"
+                    <a class="media-thumb" href="{{ asset('assets/images/pantai/Gua-Sinjang-Lawang.jpg') }}"
                         data-fancybox="gallery">
                         <div class="media-text">
-                            <h3>Lake Thun</h3>
-                            <span class="location">Switzerland</span>
+                            <h3>Goa Sinjang Lawang</h3>
+                            <span class="location">Indonesian</span>
                         </div>
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('assets/images/pantai/Gua-Sinjang-Lawang.jpg') }}" alt="Image" class="img-fluid">
                     </a>
                 </div>
 
@@ -329,8 +338,7 @@
                     <div class="owl-single owl-carousel no-nav">
                         <div class="testimonial mx-auto">
                             <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image"
-                                    class="img-fluid">
+                                <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
                             <h3 class="name">Adam Aderson</h3>
                             <blockquote>
@@ -341,8 +349,7 @@
 
                         <div class="testimonial mx-auto">
                             <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image"
-                                    class="img-fluid">
+                                <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
                             <h3 class="name">Lukas Devlin</h3>
                             <blockquote>
@@ -353,8 +360,7 @@
 
                         <div class="testimonial mx-auto">
                             <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image"
-                                    class="img-fluid">
+                                <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
                             <h3 class="name">Kayla Bryant</h3>
                             <blockquote>
@@ -386,17 +392,17 @@
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
                         <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/hero-slider-1.jpg') }}" alt="Image"
+                                src="{{ asset('assets/images/pantai/Green-Canyon.jpeg') }}" alt="Image"
                                 class="img-fluid"></a>
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
-                            <span>Italy</span>
+                            <span>Indonesian</span>
                         </span>
                         <div class="d-flex align-items-center">
                             <div>
-                                <h3><a href="#">Rialto Mountains</a></h3>
+                                <h3><a href="#">Green Canyon</a></h3>
                                 <div class="price ml-auto">
-                                    <span>$520.00</span>
+                                    <span>Rp. 10.000</span>
                                 </div>
                             </div>
 
@@ -406,18 +412,17 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image"
-                                class="img-fluid"></a>
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pantai-madasari-west-java-indonesia.jpg') }}"
+                                alt="Image" class="img-fluid"></a>
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
-                            <span>United States</span>
+                            <span>Indonesian</span>
                         </span>
                         <div class="d-flex align-items-center">
                             <div>
-                                <h3><a href="#">San Francisco</a></h3>
+                                <h3><a href="#">Pantai Madasari</a></h3>
                                 <div class="price ml-auto">
-                                    <span>$520.00</span>
+                                    <span>Rp. 5.000</span>
                                 </div>
                             </div>
 
@@ -427,18 +432,17 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/hero-slider-3.jpg') }}" alt="Image"
-                                class="img-fluid"></a>
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('/assets/images/pantai/sungai-citumang.jpg') }}"
+                                alt="Image" class="img-fluid"></a>
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
-                            <span>Malaysia</span>
+                            <span>Indonesian</span>
                         </span>
                         <div class="d-flex align-items-center">
                             <div>
-                                <h3><a href="#">Perhentian Islands</a></h3>
+                                <h3><a href="#">Sungai Citumang</a></h3>
                                 <div class="price ml-auto">
-                                    <span>$750.00</span>
+                                    <span>Rp. 20.000</span>
                                 </div>
                             </div>
 
@@ -448,20 +452,19 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/hero-slider-4.jpg') }}" alt="Image"
-                                class="img-fluid"></a>
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}"
+                                alt="Image" class="img-fluid"></a>
 
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
-                            <span>Switzerland</span>
+                            <span>Indonesian</span>
                         </span>
 
                         <div class="d-flex align-items-center">
                             <div>
-                                <h3><a href="#">Lake Thun</a></h3>
+                                <h3><a href="#">Pantai Karang Nini</a></h3>
                                 <div class="price ml-auto">
-                                    <span>$520.00</span>
+                                    <span>Rp. 7.500</span>
                                 </div>
                             </div>
 
@@ -479,8 +482,8 @@
 
                 <div class="col-lg-6">
                     <figure class="img-play-video">
-                        <a id="play-video" class="video-play-button"
-                            href="https://www.youtube.com/watch?v=mwtbEGNABWU" data-fancybox>
+                        <a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU"
+                            data-fancybox>
                             <span></span>
                         </a>
                         <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image"
@@ -603,8 +606,8 @@
                         <p>Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script>. All Rights Reserved. &mdash; Designed with love by <a
-                                href="https://untree.co" class="link-highlight">Untree.co</a>
+                            </script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co"
+                                class="link-highlight">Untree.co</a>
                             <!-- License information: https://untree.co/license/ -->Distributed By <a
                                 href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </p>
@@ -637,17 +640,17 @@
     <script src="{{ asset('assets/js/typed.js') }}"></script>
 
     <script>
-        $(function() {
+        $(function () {
             var slides = $('.slides'),
                 images = slides.find('img');
 
-            images.each(function(i) {
+            images.each(function (i) {
                 $(this).attr('data-id', i + 1);
             })
 
             var typed = new Typed('.typed-words', {
-                strings: ["Pantai Pangandaran", " Green Canyon", " Pantai Karapyak", "Sungai Citumang",
-                    " pantai Batu Hiu"
+                strings: ["Pantai Pangandaran", " Green Canyon", " Pantai Karang Nini", "Pantai Batu Hiu",
+                    " pantai Madasari"
                 ],
                 typeSpeed: 80,
                 backSpeed: 80,

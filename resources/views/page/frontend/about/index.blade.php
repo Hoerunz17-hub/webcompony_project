@@ -38,15 +38,15 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="owl-single dots-absolute owl-carousel">
-                        <img src="{{ asset('assets/images/slider-1.jpg') }}" alt="Free HTML Template by Untree.co"
+                        <img src="{{ asset('assets/images/pantai/the-arwana.jpg') }}" alt="Free HTML Template by Untree.co"
                             class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-2.jpg') }}" alt="Free HTML Template by Untree.co"
+                        <img src="{{ asset('assets/images/pantai/madasari-.jpg') }}" alt="Free HTML Template by Untree.co"
                             class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-3.jpg') }}" alt="Free HTML Template by Untree.co"
+                        <img src="{{ asset('assets/images/pantai/pnd.png') }}" alt="Free HTML Template by Untree.co"
                             class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-4.jpg') }}" alt="Free HTML Template by Untree.co"
+                        <img src="{{ asset('assets/images/pantai/Pantai-Pangandaran-ndonesia.jpg') }}" alt="Free HTML Template by Untree.co"
                             class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-5.jpg') }}" alt="Free HTML Template by Untree.co"
+                        <img src="{{ asset('assets/images/pantai/green-canyon-about-us.jpg') }}" alt="Free HTML Template by Untree.co"
                             class="img-fluid rounded-20">
                     </div>
                 </div>

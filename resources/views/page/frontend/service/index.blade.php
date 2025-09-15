@@ -37,11 +37,11 @@
             <div class="row">
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-1.jpg') }}"
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pantai-madasari.jpg') }}"
                                 alt="Image" class="img-fluid"></a>
                         <div class="d-flex">
                             <div>
-                                <h3><a href="#">Excellence in Travel</a></h3>
+                                <h3><a href="#">Pantai Madasari</a></h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                     there live the blind texts.</p>
                             </div>
@@ -50,11 +50,11 @@
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-2.jpg') }}"
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/cagar-alam.webp') }}"
                                 alt="Image" class="img-fluid"></a>
                         <div class="d-flex">
                             <div>
-                                <h3><a href="#">Discovering Best</a></h3>
+                                <h3><a href="#">Cagar Alam Pananjung</a></h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                     there live the blind texts.</p>
                             </div>
@@ -63,11 +63,11 @@
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-3.jpg') }}"
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pasir-putih.jpg') }}"
                                 alt="Image" class="img-fluid"></a>
                         <div class="d-flex">
                             <div>
-                                <h3><a href="#">A New Moments of Life</a></h3>
+                                <h3><a href="#">Pantai Pasir Putih</a></h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                     there live the blind texts.</p>
                             </div>
@@ -76,11 +76,11 @@
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-4.jpg') }}"
+                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/green-canyon-about-us.jpg') }}"
                                 alt="Image" class="img-fluid"></a>
                         <div class="d-flex">
                             <div>
-                                <h3><a href="#">Joy To Your Journey</a></h3>
+                                <h3><a href="#">Green Canyon</a></h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                     there live the blind texts.</p>
                             </div>
@@ -150,7 +150,7 @@
                     <div class="h-100">
                         <div class="frame h-100">
                             <div class="feature-img-bg h-100"
-                                style="background-image: url({{ asset('assets/images/hero-slider-1.jpg') }});"></div>
+                                style="background-image: url({{ asset('assets/images/pantai/Villa.jpg') }});"></div>
                         </div>
                     </div>
                 </div>
