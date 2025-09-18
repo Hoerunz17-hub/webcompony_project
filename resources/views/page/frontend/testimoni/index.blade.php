@@ -21,8 +21,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Testimonials</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Don’t just take our word for it — see what our 
+                        travelers have to say! Their smiles and stories say it all.</p>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@
                             </figure>
                             <h3 class="name">Adam Aderson</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;The entire trip was perfectly organized — from transportation to activities. 
+                                Everything ran smoothly, and I could just relax and enjoy every moment.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -61,8 +61,8 @@
                             </figure>
                             <h3 class="name">Lukas Devlin</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Such a wonderful experience! The guides were friendly and knowledgeable, 
+                                and we discovered hidden gems we would never have found on our own.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -72,8 +72,8 @@
                             </figure>
                             <h3 class="name">Kayla Bryant</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Beautiful destinations, excellent service, and a stress-free trip.
+                                Highly recommended for anyone who wants a well-planned vacation.&rdquo;</p>
                             </blockquote>
                         </div>
 

@@ -21,8 +21,9 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">About Us</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">We love exploring new places — and we want you to love it too! 
+                        Our team is here to help you find the best spots, plan amazing adventures, 
+                        and make memories that will last a lifetime.</p>
                     </div>
                 </div>
             </div>
@@ -52,20 +53,18 @@
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
                     <h2 class="section-title mb-4">About Tours</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>In the folklore created by the people of Pangandaran, 
+                    Pangandaran was formed when the Pananjung Village was first 
+                    opened by the fishermen of the Sundanese tribe.</p>
                     <ul class="list-unstyled two-col clearfix">
-                        <li>Outdoor recreation activities</li>
-                        <li>Airlines</li>
-                        <li>Car Rentals</li>
-                        <li>Cruise Lines</li>
-                        <li>Hotels</li>
-                        <li>Railways</li>
+                        <li>The Arwana</li>
+                        <li>Pantai Madasari</li>
+                        <li>Pantai Pangandaran</li>
+                        <li>Pantai Pasir Putih</li>
+                        <li>Green Canyon</li>
+                        <li>Villa</li>
                         <li>Travel Insurance</li>
-                        <li>Package Tours</li>
-                        <li>Insurance</li>
-                        <li>Guide Books</li>
+                        <li>Restaurants & Cafe</li>
                     </ul>
                 </div>
             </div>
@@ -79,9 +78,8 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
                     <h2 class="section-title mb-3 text-center">Team</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>We’re a group of travel lovers, storytellers, and adventure seekers who are here to make your 
+                    trip fun and stress-free. From planning to guiding, we’ve got your back every step of the way.</p>
                 </div>
             </div>
 
@@ -96,17 +94,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mb-4">
-                    <div class="team">
-                        <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image"
-                            class="img-fluid mb-4 rounded-20">
-                        <div class="px-3">
-                            <h3 class="mb-0">Carl Anderson</h3>
-                            <p>Co-Founder &amp; CEO</p>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-lg-3 mb-4">
                     <div class="team">
                         <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image"
@@ -148,10 +135,10 @@
                             <figure class="img-wrap">
                                 <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
-                            <h3 class="name">Adam Aderson</h3>
+                            <h3 class="name">Iwayang</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Explorers will be invited to navigate the swift currents of the Cijulang river
+                                over a track length of approximately 2.5 km or with a duration of 2 to 3 hours.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -159,10 +146,10 @@
                             <figure class="img-wrap">
                                 <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
-                            <h3 class="name">Lukas Devlin</h3>
+                            <h3 class="name">Ricardo Asep</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Pangandaran Fun Offroad is an outdoor activity that is perfect for relieving your stress.
+                                Explorers will traverse the land route from the Green Canyon trails to Batu Karas beach.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -172,8 +159,8 @@
                             </figure>
                             <h3 class="name">Kayla Bryant</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Body Rafting Citumang Pangandaran, one of the Body Rafting spots that 
+                                has become a favorite and popular activity and location among visitors in Pangandaran.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -192,9 +179,9 @@
 
                 <div class="col-lg-5">
                     <h2 class="section-title text-left mb-4">Why Choose Us</h2>
-                    <p>Berpengalaman dan profesional dalam melayani wisatawan, menghadirkan destinasi lengkap mulai dari
-                        pantai, alam, hingga kuliner khas Pangandaran, bekerja sama dengan hotel dan transportasi
-                        terpercaya, serta menawarkan harga yang terjangkau dan transparan.</p>
+                    <p>Experienced and professional in serving tourists, presenting complete destinations 
+                    ranging from beaches, nature, to the culinary specialties of Pangandaran, collaborating 
+                    with trusted hotels and transportation, and offering affordable and transparent prices.</p>
 
                 </div>
             </div>

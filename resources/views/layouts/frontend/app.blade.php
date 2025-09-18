@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
-    <title>Tour Free Bootstrap Template for Travel Agency by Untree.co</title>
+    <title>Travel Agency by Untree.co</title>
 </head>
 
 <body>

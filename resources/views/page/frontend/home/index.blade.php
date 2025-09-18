@@ -45,7 +45,7 @@
     <nav class="site-nav">
         <div class="container">
             <div class="site-navigation">
-                <a href="index.html" class="logo m-0">PANORAID <span class="text-primary"></span></a>
+                <a href="index.html" class="logo m-0">BLUE HORIZON<span class="text-primary"></span></a>
 
                 <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
                     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
@@ -340,10 +340,10 @@
                             <figure class="img-wrap">
                                 <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
-                            <h3 class="name">Adam Aderson</h3>
+                            <h3 class="name">Ricardo Asep</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Explorers will be invited to navigate the swift currents of the Cijulang river
+                                over a track length of approximately 2.5 km or with a duration of 2 to 3 hours.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -351,10 +351,10 @@
                             <figure class="img-wrap">
                                 <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
                             </figure>
-                            <h3 class="name">Lukas Devlin</h3>
+                            <h3 class="name">Iwayang</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Pangandaran Fun Offroad is an outdoor activity that is perfect for relieving your stress.
+                                Explorers will traverse the land route from the Green Canyon trails to Batu Karas beach.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -364,8 +364,8 @@
                             </figure>
                             <h3 class="name">Kayla Bryant</h3>
                             <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
+                                <p>&ldquo;Body Rafting Citumang Pangandaran, one of the Body Rafting spots that 
+                                has become a favorite and popular activity and location among visitors in Pangandaran.&rdquo;</p>
                             </blockquote>
                         </div>
 
@@ -383,9 +383,9 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-6">
                     <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>Pangandaran Regency (Sundanese script: ᮕᮍᮔ᮪ᮓᮛᮔ᮪) 
+                    is a regency located at the southeastern tip of West Java Province, Indonesia. 
+                    Its capital is Parigi. Pangandaran Regency has an area of 1,011.04 km².</p>
                 </div>
             </div>
             <div class="row">
@@ -482,36 +482,36 @@
 
                 <div class="col-lg-6">
                     <figure class="img-play-video">
-                        <a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU"
+                        <a id="play-video" class="video-play-button" href="https://youtu.be/gm2bD_YX4lk?si=_Fpe2DO8l7ESEmam"
                             data-fancybox>
                             <span></span>
                         </a>
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image"
+                        <img src="{{ asset('assets/images/pantai/pnd-thumbnail.jpg') }}" alt="Image"
                             class="img-fluid rounded-20">
                     </figure>
                 </div>
 
                 <div class="col-lg-5">
                     <h2 class="section-title text-left mb-4">Take a look at Tour Video</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>The name "Pangandaran" has three meanings, namely the word andar, andar-andar, and pangan + daharan. 
+                    Andar-andar, in Sundanese, means "traveler" or "immigrant".
+                    This is because the area was previously a place opened by the Sunda tribe fishermen.</p>
 
-                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary
-                        regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your
-                        mouth.</p>
+                    <p class="mb-4">In the folklore created by the people of Pangandaran, 
+                    Pangandaran was formed when the Pananjung Village was 
+                    first opened by the fishermen of the Sundanese tribe.</p>
 
                     <ul class="list-unstyled two-col clearfix">
-                        <li>Outdoor recreation activities</li>
-                        <li>Airlines</li>
-                        <li>Car Rentals</li>
-                        <li>Cruise Lines</li>
-                        <li>Hotels</li>
-                        <li>Railways</li>
-                        <li>Travel Insurance</li>
-                        <li>Package Tours</li>
-                        <li>Insurance</li>
-                        <li>Guide Books</li>
+                        <li>Aquarium Indonesia</li>
+                        <li>Pantai Batu Hiu</li>
+                        <li>Pantai Madasari</li>
+                        <li>Pantai Timur Pangandaran</li>
+                        <li>Pantai Barat Pangandaran</li>
+                        <li>Pantai Karapyak</li>
+                        <li>Sungai Citumang</li>
+                        <li>Pantai Batu Karas</li>
+                        <li>Pantai Karang Nini</li>
+                        <li>Green Canyon Pangandaran</li>
                     </ul>
 
                     <p><a href="#" class="btn btn-primary">Get Started</a></p>
@@ -529,8 +529,8 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
-                    <p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Excepturi, fugit?</p>
+                    <p class="mb-4 lead text-white text-white-opacity">Pangandaran is a town and 
+                    district of Pangandaran Regency within the province of West Java, Indonesia.</p>
                     <p class="mb-0"><a href="booking.html"
                             class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
                 </div>
@@ -547,8 +547,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="widget">
                             <h3 class="heading">About Tour</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                            <p>Get ready for an exciting adventure! This tour is packed with beautiful spots, fun activities,
+                            and plenty of photo opportunities. It’s the perfect way to explore and create unforgettable memories.</p>
                         </div>
                         <div class="widget">
                             <ul class="list-unstyled social">
