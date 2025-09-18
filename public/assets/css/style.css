@@ -1823,3 +1823,47 @@ h4,
         height: 500px; /* khusus desktop lebih tinggi */
     }
 }
+
+/* Samakan ukuran gambar di .slides tanpa ubah HTML */
+.slides {
+    position: relative;
+    width: 100%;
+  height: 100%; /* ikut tinggi col-lg-5 */
+    display: flex;
+}
+
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  object-fit: cover; /* gambar isi penuh container */
+}
+/* Popular Destination Image Style */
+.owl-3-slider .item img {
+    width: 100%;
+    height: 590px; /* kamu bisa sesuaikan, ini contoh sama tinggi seperti gambar */
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+.img-play-video img {
+    aspect-ratio: 4 / 5;
+  object-fit: cover; /* biar gambar tetap penuh menyesuaikan */
+    width: 100%;
+    height: auto;
+}
+/* Khusus row team */
+.untree_co-section .row:nth-of-type(2) {
+    justify-content: center;
+    text-align: center;
+}
+.row {
+    justify-content: center !important;
+    text-align: center;
+}
+
+
+
+

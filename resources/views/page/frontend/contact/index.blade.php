@@ -15,8 +15,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Our Contact</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Got a question, an idea, or just want to say hi? 
+                        Drop us a message — we’d love to hear from you and help make your trip amazing!</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="quick-contact-item d-flex align-items-center mb-4">
                         <span class="flaticon-house"></span>
                         <address class="text">
-                            155 Market St #101, Paterson, NJ 07505, United States
+                            West Coast Street No.19 46396 Pangandaran Village West Java
                         </address>
                     </div>
                     <div class="quick-contact-item d-flex align-items-center mb-4">
