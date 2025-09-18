@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->unsignedTinyInteger('rating')->default(5);
-            $table->enum('is_active', ['active', 'incative'] );
+            $table->enum('is_active', ['active', 'inactive'] );
             $table->timestamps();
         });
     }

@@ -21,8 +21,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">About Us</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Mengenal lebih dekat siapa kami dan komitmen kami dalam menghadirkan wisata
+                            Pangandaran yang berkesan.</p>
                     </div>
                 </div>
             </div>
@@ -38,23 +38,18 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="owl-single dots-absolute owl-carousel">
-                        <img src="{{ asset('assets/images/slider-1.jpg') }}" alt="Free HTML Template by Untree.co"
-                            class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-2.jpg') }}" alt="Free HTML Template by Untree.co"
-                            class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-3.jpg') }}" alt="Free HTML Template by Untree.co"
-                            class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-4.jpg') }}" alt="Free HTML Template by Untree.co"
-                            class="img-fluid rounded-20">
-                        <img src="{{ asset('assets/images/slider-5.jpg') }}" alt="Free HTML Template by Untree.co"
-                            class="img-fluid rounded-20">
+                        @foreach ($abouts as $about)
+                            <img src="{{ asset('storage/' . $about->photo) }}" alt="Free HTML Template by Untree.co"
+                                class="img-fluid rounded-20">
+                        @endforeach
+
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    @foreach ($abouts as $about)
+                        <h2 class="section-title mb-4">About Us</h2>
+                        <p>{{ $about->description }}</p>
+                    @endforeach
                     <ul class="list-unstyled two-col clearfix">
                         <li>Outdoor recreation activities</li>
                         <li>Airlines</li>
@@ -79,54 +74,26 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
                     <h2 class="section-title mb-3 text-center">Team</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>Kami adalah tim yang berdedikasi untuk memberikan pelayanan terbaik dalam setiap perjalanan wisata
+                        Anda. Dengan pengalaman dan semangat kerja sama, kami siap memastikan liburan di Pangandaran menjadi
+                        lebih mudah, nyaman, dan menyenangkan.</p>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-3 mb-4">
-                    <div class="team">
-                        <img src="{{ asset('assets/images/person_1.jpg') }}" alt="Image"
-                            class="img-fluid mb-4 rounded-20">
-                        <div class="px-3">
-                            <h3 class="mb-0">James Watson</h3>
-                            <p>Co-Founder &amp; CEO</p>
+            <div class="row justify-content-center">
+                @foreach ($tenagakerjas as $tenagakerja)
+                    <div class="col-lg-3 mb-4">
+                        <div class="team">
+                            <img src="{{ asset('storage/' . $tenagakerja->photo) }}" alt="Image"
+                                class="img-fluid mb-4 rounded-20">
+                            <div class="px-3">
+                                <h3 class="mb-0">{{ $tenagakerja->name }}</h3>
+                                <p>{{ $tenagakerja->position }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <div class="team">
-                        <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image"
-                            class="img-fluid mb-4 rounded-20">
-                        <div class="px-3">
-                            <h3 class="mb-0">Carl Anderson</h3>
-                            <p>Co-Founder &amp; CEO</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
-                <div class="col-lg-3 mb-4">
-                    <div class="team">
-                        <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image"
-                            class="img-fluid mb-4 rounded-20">
-                        <div class="px-3">
-                            <h3 class="mb-0">Michelle Allison</h3>
-                            <p>Co-Founder &amp; CEO</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <div class="team">
-                        <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image"
-                            class="img-fluid mb-4 rounded-20">
-                        <div class="px-3">
-                            <h3 class="mb-0">Drew Wood</h3>
-                            <p>Co-Founder &amp; CEO</p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -144,38 +111,20 @@
                     <h2 class="section-title text-center mb-5">Testimonials</h2>
 
                     <div class="owl-single owl-carousel no-nav">
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Adam Aderson</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Lukas Devlin</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
+                        @foreach ($testimonials as $testimoni)
+                            <div class="testimonial mx-auto">
+                                <figure class="img-wrap">
+                                    <img src="{{ asset('storage/' . $testimoni->photo_profile) }}" alt="Image"
+                                        class="img-fluid">
+                                </figure>
+                                <h3 class="name">{{ $testimoni->title }}</h3>
+                                <blockquote>
+                                    <p>&ldquo;{{ $testimoni->description }}&rdquo;</p>
+                                </blockquote>
+                            </div>
+                        @endforeach
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Kayla Bryant</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
                     </div>
 

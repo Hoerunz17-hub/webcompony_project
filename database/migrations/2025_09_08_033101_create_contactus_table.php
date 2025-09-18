@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('last_name')->nullable();
             $table->string('subject')->nullable();
             $table->text('description')->nullable();
-            $table->enum('is_active', ['active', 'incative'] );
+            $table->enum('is_active', ['active', 'inactive'] );
             $table->timestamps();
         });
     }

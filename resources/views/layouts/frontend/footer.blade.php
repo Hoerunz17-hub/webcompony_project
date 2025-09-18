@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="widget">
-                        <h3 class="heading">About Tour</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                        <h3 class="heading">About Us</h3>
+                        <p>Penyedia layanan wisata Pangandaran dengan destinasi lengkap, pelayanan ramah, dan harga
+                            terjangkau untuk pengalaman liburan terbaik Anda.</p>
                     </div>
                     <div class="widget">
                         <ul class="list-unstyled social">

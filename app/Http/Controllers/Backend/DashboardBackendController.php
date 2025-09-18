@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class DashboardBackendController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('page.backend.dashboard.index');
+    }
 }

@@ -15,8 +15,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Our Partners</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Didukung oleh mitra terpercaya: Traveloka, The Arnawa Hotel, Wonderful
+                            Indonesia, dan Divecenter Pangandaran. </p>
                     </div>
                 </div>
             </div>

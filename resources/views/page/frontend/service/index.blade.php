@@ -21,8 +21,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Our Services</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia
-                            and Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Kami menyediakan paket wisata Pangandaran lengkap mulai dari tur pantai,
+                            jelajah alam, hingga wisata kuliner, dengan dukungan transportasi dan akomodasi terpercaya.</p>
                     </div>
                 </div>
             </div>
@@ -35,61 +35,22 @@
     <div class="untree_co-section">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-1.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
-                        <div class="d-flex">
-                            <div>
-                                <h3><a href="#">Excellence in Travel</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                            </div>
+                @foreach ($sejarahs as $sejarah)
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+                        <div class="media-1 text-center">
+                            <a href="#" class="d-block mb-3">
+                                <img src="{{ asset('storage/' . $sejarah->photo) }}" alt="Image"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h3><a href="#">{{ $sejarah->title }}</a></h3>
+                            <p>{{ $sejarah->description }}</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-2.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
-                        <div class="d-flex">
-                            <div>
-                                <h3><a href="#">Discovering Best</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-3.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
-                        <div class="d-flex">
-                            <div>
-                                <h3><a href="#">A New Moments of Life</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/hero-slider-4.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
-                        <div class="d-flex">
-                            <div>
-                                <h3><a href="#">Joy To Your Journey</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
+
     <!-- END section image -->
 
 
@@ -140,9 +101,8 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">More Services</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five Star
+                    </p>
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -155,45 +115,24 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+                <div class="col-6 col-sm-6 col-lg-8  feature-1-wrap d-md-flex flex-md-column order-lg-1 ">
 
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-house display-4 text-primary"></span>
-                            <h3>Beautiful Condo</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-lg-5 mx-2 feature-1 d-md-flex">
+                                <div class="align-self-center">
+                                    {{-- <span class="flaticon-house display-4 text-primary"></span> --}}
+                                    <img src="{{ asset('storage/' . $service->photo) }}" width="50" alt="">
+                                    <h3>{{ $service->title }}</h3>
+                                    <p class="mb-0">{{ $service->description }}
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-
-                    <div class="feature-1 ">
-                        <div class="align-self-center">
-                            <span class="flaticon-restaurant display-4 text-primary"></span>
-                            <h3>Restaurants & Cafe</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
                 </div>
 
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
 
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-mail display-4 text-primary"></span>
-                            <h3>Easy to Connect</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-phone-call display-4 text-primary"></span>
-                            <h3>24/7 Support</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
         </div>

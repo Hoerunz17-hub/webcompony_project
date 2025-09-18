@@ -53,7 +53,6 @@
                     <li class="{{ Request::is('service') ? 'active' : '' }}"><a href="/service">Services</a></li>
                     <li class="{{ Request::is('galery') ? 'active' : '' }}"><a href="/galery">Gallery</a></li>
                     <li class="{{ Request::is('partner') ? 'active' : '' }}"><a href="/partner">Partners</a></li>
-                    <li class="{{ Request::is('testimoni') ? 'active' : '' }}"><a href="/testimoni">Testimonials</a>
                     </li>
                     <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
                 </ul>
@@ -69,7 +68,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="intro-wrap">
-                        <h1 class="mb-5"><span class="d-block">Let's Enjoy Your</span> Trip In <span
+                        <h1 class="mb-5"><span class="d-block">Enjoy Your</span> Trip In <span
                                 class="typed-words"></span></h1>
 
                         <div class="row">
@@ -116,12 +115,9 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="slides">
-                        <img src="{{ asset('assets/images/hero-slider-1.jpg') }}" alt="Image"
-                            class="img-fluid active">
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-3.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-4.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/hero-slider-5.jpg') }}" alt="Image" class="img-fluid">
+                        @foreach ($heros as $hero)
+                            <img src="{{ asset('storage/' . $hero->photo) }}" alt="Image"class="img-fluid active">
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -135,9 +131,8 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">Our Services</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
+                    <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five
+                        Star</p>
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -150,46 +145,23 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
 
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-house display-4 text-primary"></span>
-                            <h3>Beautiful Condo</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
+                <div class="col-6 col-sm-6 col-lg-8  feature-1-wrap d-md-flex flex-md-column order-lg-1 ">
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-lg-5 mx-2 feature-1 d-md-flex">
+                                <div class="align-self-center">
+                                    {{-- <span class="flaticon-house display-4 text-primary"></span> --}}
+                                    <img src="{{ asset('storage/' . $service->photo) }}" width="50"
+                                        alt="">
+                                    <h3>{{ $service->title }}</h3>
+                                    <p class="mb-0">{{ $service->description }}
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-
-                    <div class="feature-1 ">
-                        <div class="align-self-center">
-                            <span class="flaticon-restaurant display-4 text-primary"></span>
-                            <h3>Restaurants & Cafe</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
                 </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
-
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-mail display-4 text-primary"></span>
-                            <h3>Easy to Connect</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-phone-call display-4 text-primary"></span>
-                            <h3>24/7 Support</h3>
-                            <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </div>
     </div>
@@ -246,72 +218,18 @@
 
             <div class="owl-carousel owl-3-slider">
 
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-1.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Pragser Wildsee</h3>
-                            <span class="location">Italy</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-1.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-2.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Oia</h3>
-                            <span class="location">Greece</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-3.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Perhentian Islands</h3>
-                            <span class="location">Malaysia</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-3.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-4.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Rialto Bridge</h3>
-                            <span class="location">Italy</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-4.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-5.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>San Francisco, United States</h3>
-                            <span class="location">United States</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-5.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/hero-slider-1.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Lake Thun</h3>
-                            <span class="location">Switzerland</span>
-                        </div>
-                        <img src="{{ asset('assets/images/hero-slider-2.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
+                @foreach ($gallerys as $gallery)
+                    <div class="item">
+                        <a class="media-thumb" href="{{ asset('storage/' . $gallery->photo) }}"
+                            data-fancybox="gallery">
+                            <div class="media-text">
+                                <h3>{{ $gallery->title }}</h3>
+                                <span class="location">{{ $gallery->description }}</span>
+                            </div>
+                            <img src="{{ asset('storage/' . $gallery->photo) }}" alt="Image" class="img-fluid">
+                        </a>
+                    </div>
+                @endforeach
 
             </div>
 
@@ -327,41 +245,20 @@
                     <h2 class="section-title text-center mb-5">Testimonials</h2>
 
                     <div class="owl-single owl-carousel no-nav">
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image"
-                                    class="img-fluid">
-                            </figure>
-                            <h3 class="name">Adam Aderson</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image"
-                                    class="img-fluid">
-                            </figure>
-                            <h3 class="name">Lukas Devlin</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
+                        @foreach ($testimonials as $testimoni)
+                            <div class="testimonial mx-auto">
+                                <figure class="img-wrap">
+                                    <img src="{{ asset('storage/' . $testimoni->photo_profile) }}" alt="Image"
+                                        class="img-fluid">
+                                </figure>
+                                <h3 class="name">{{ $testimoni->title }}</h3>
+                                <blockquote>
+                                    <p>&ldquo;{{ $testimoni->description }}&rdquo;</p>
+                                </blockquote>
+                            </div>
+                        @endforeach
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image"
-                                    class="img-fluid">
-                            </figure>
-                            <h3 class="name">Kayla Bryant</h3>
-                            <blockquote>
-                                <p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-                                    coast of the Semantics, a large language ocean.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
                     </div>
 
@@ -526,8 +423,8 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
-                    <p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Excepturi, fugit?</p>
+                    <p class="mb-4 lead text-white text-white-opacity">Capek Mikirin Masalah Hidup?, Capek Dikerjar
+                        Rentenir? Healing Di PND Solusinya!</p>
                     <p class="mb-0"><a href="booking.html"
                             class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
                 </div>
@@ -543,9 +440,9 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="widget">
-                            <h3 class="heading">About Tour</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                            <h3 class="heading">About Us</h3>
+                            <p>Penyedia layanan wisata Pangandaran dengan destinasi lengkap, pelayanan ramah, dan harga
+                                terjangkau untuk pengalaman liburan terbaik Anda.</p>
                         </div>
                         <div class="widget">
                             <ul class="list-unstyled social">
@@ -637,6 +534,8 @@
     <script src="{{ asset('assets/js/typed.js') }}"></script>
 
     <script>
+        var tes = @json($hirotiles);
+
         $(function() {
             var slides = $('.slides'),
                 images = slides.find('img');
@@ -646,9 +545,7 @@
             })
 
             var typed = new Typed('.typed-words', {
-                strings: ["Pantai Pangandaran", " Green Canyon", " Pantai Karapyak", "Sungai Citumang",
-                    " pantai Batu Hiu"
-                ],
+                strings: tes,
                 typeSpeed: 80,
                 backSpeed: 80,
                 backDelay: 4000,
