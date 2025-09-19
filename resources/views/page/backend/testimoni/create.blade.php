@@ -28,25 +28,18 @@
                                     <textarea class="form-control" name="description" id="description" rows="3"></textarea>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">Rating</label>
-                                    <div class="rating">
-                                        <input type="radio" id="1" name="rating" value="1">
-                                        <label for="">1</label>
-
-                                        <input type="radio" id="2" name="rating" value="2">
-                                        <label for="">2</label>
-
-                                        <input type="radio" id="3" name="rating" value="3">
-                                        <label for="">3</label>
-
-                                        <input type="radio" id="rating" name="rating" value="4">
-                                        <label for="">4</label>
-
-                                        <input type="radio" id="rating" name="rating" value="5">
-                                        <label for="">5</label>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <label class="form-label me-3 mb-0">Rating</label>
+                                    <div class="star-rating">
+                                        @for ($i = 5; $i >= 1; $i--)
+                                            <input type="radio" id="star{{ $i }}" name="rating"
+                                                value="{{ $i }}" />
+                                            <label for="star{{ $i }}"
+                                                title="{{ $i }} stars">&#9733;</label>
+                                        @endfor
                                     </div>
                                 </div>
+
 
                                 <button type="submit" class="btn btn-primary me-2">Tambah</button>
                                 <a href="/admin/galery" class="btn btn-secondary">Kembali</a>
@@ -58,4 +51,29 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .star-rating {
+            direction: rtl;
+            display: flex;
+            gap: 5px;
+            font-size: 28px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star-rating input:checked~label,
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #ffc107;
+        }
+    </style>
 @endsection

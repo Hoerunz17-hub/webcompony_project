@@ -14,8 +14,15 @@
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="foto" class="form-label">Tambah Foto</label>
+                                    <label for="foto" class="form-label">Ubah Foto</label>
                                     <input type="file" class="form-control" name="foto" id="foto">
+
+                                    @if ($tenagakerja->photo)
+                                        <div class="mt-2">
+                                            <img src="{{ asset('storage/' . $tenagakerja->photo) }}" alt="Foto Lama"
+                                                style="width:100px; border-radius:8px;">
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="mb-3">

@@ -247,29 +247,36 @@
                     <h2 class="section-title text-center mb-5">Testimonials</h2>
 
                     <div class="owl-single owl-carousel no-nav">
-
-
                         @foreach ($testimonials as $testimoni)
                             <div class="testimonial mx-auto">
                                 <figure class="img-wrap">
                                     <img src="{{ asset('storage/' . $testimoni->photo_profile) }}" alt="Image"
-                                        class="img-fluid">
+                                        class="img-fluid rounded-circle"
+                                        style="width: 100px; height: 100px; object-fit: cover;">
                                 </figure>
                                 <h3 class="name">{{ $testimoni->title }}</h3>
                                 <blockquote>
                                     <p>&ldquo;{{ $testimoni->description }}&rdquo;</p>
                                 </blockquote>
+
+                                {{-- ⭐ Tampilkan rating di sini --}}
+                                <div class="rating">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        @if ($i <= $testimoni->rating)
+                                            <span style="color:#ffc107; font-size:20px;">&#9733;</span>
+                                        @else
+                                            <span style="color:#e4e5e9; font-size:20px;">&#9733;</span>
+                                        @endif
+                                    @endfor
+                                </div>
                             </div>
                         @endforeach
-
-
-
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+
     <!-- end testimonial -->
 
     <!--- special officer -->
