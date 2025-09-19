@@ -139,25 +139,8 @@
 
                 </div>
 
-                <div class="feature-1 d-md-flex">
-                    <div class="align-self-center">
-                        <span class="flaticon-mail display-4 text-primary"></span>
-                        <h3>Easy to Connect</h3>
-                        <p class="mb-0">Pangandaran’s closest train stations are in Banjar (roughly to the north)
-                            and Sidareja
-                            (to the northeast)— both are on the same railway line and are around two hours by bus
-                            from Pangandaran.</p>
-                    </div>
-                </div>
 
-                <div class="feature-1 ">
-                    <div class="align-self-center">
-                        <span class="flaticon-phone-call display-4 text-primary"></span>
-                        <h3>24/7 Support</h3>
-                        <p class="mb-0">Supported by 24/7 customer support services and a professional expert team,
-                            ensuring maximum uptime and quick response to any issues that may arise.</p>
-                    </div>
-                </div>
+
 
             </div>
 
