@@ -45,7 +45,7 @@
     <nav class="site-nav">
         <div class="container">
             <div class="site-navigation">
-                <a href="index.html" class="logo m-0">BLUE HORIZON<span class="text-primary"></span></a>
+                <a href="index.html" class="logo m-0">PANORAID <span class="text-primary"></span></a>
 
                 <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
                     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
@@ -133,10 +133,8 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">Our Services</h2>
-
                     <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five
                         Star</p>
-
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -144,11 +142,11 @@
                     <div class="h-100">
                         <div class="frame h-100">
                             <div class="feature-img-bg h-100"
-                                style="background-image: url({{ asset('/assets/images/pantai/Villa.jpg') }});"></div>
+                                style="background-image: url({{ asset('assets/images/pantai/the-arwana.jpg') }});">
+                            </div>
                         </div>
                     </div>
                 </div>
-
 
 
                 <div class="col-6 col-sm-6 col-lg-8  feature-1-wrap d-md-flex flex-md-column order-lg-1 ">
@@ -167,7 +165,6 @@
                         @endforeach
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -223,8 +220,6 @@
             </div>
 
             <div class="owl-carousel owl-3-slider">
-
-
                 @foreach ($gallerys as $gallery)
                     <div class="item">
                         <a class="media-thumb" href="{{ asset('storage/' . $gallery->photo) }}"
@@ -237,9 +232,8 @@
                         </a>
                     </div>
                 @endforeach
-
-
             </div>
+
 
         </div>
     </div>
@@ -284,9 +278,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-6">
                     <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
-                    <p>Pangandaran Regency (Sundanese script: ᮕᮍᮔ᮪ᮓᮛᮔ᮪)
-                        is a regency located at the southeastern tip of West Java Province, Indonesia.
-                        Its capital is Parigi. Pangandaran Regency has an area of 1,011.04 km².</p>
+                    <p>Dapatkan promo dan diskon terbaik untuk perjalanan wisata Anda di Pangandaran</p>
                 </div>
             </div>
             <div class="row">
