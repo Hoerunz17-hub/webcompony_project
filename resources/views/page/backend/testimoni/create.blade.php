@@ -15,6 +15,11 @@
                                 <div class="mb-3">
                                     <label for="foto" class="form-label">Tambah Foto Profile</label>
                                     <input type="file" class="form-control" name="photo_profile" id="foto_profile">
+                                    {{-- Preview Gambar --}}
+                                    <div class="mt-3">
+                                        <img id="preview" src="#" alt="Preview Gambar"
+                                            style="max-width: 100%; height: auto; display: none; border:1px solid #ddd; border-radius:8px; padding:5px;" />
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">
@@ -76,4 +81,18 @@
             color: #ffc107;
         }
     </style>
+    {{-- Script Preview --}}
+    <script>
+        document.getElementById("foto_profile").addEventListener("change", function(event) {
+            let reader = new FileReader();
+            reader.onload = function() {
+                let preview = document.getElementById("preview");
+                preview.src = reader.result;
+                preview.style.display = "block";
+            }
+            if (event.target.files[0]) {
+                reader.readAsDataURL(event.target.files[0]);
+            }
+        });
+    </script>
 @endsection

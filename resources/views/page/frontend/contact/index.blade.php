@@ -81,4 +81,30 @@
         </div>
     </div>
     <!-- end message -->
+
+    {{-- Modal Success --}}
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center p-4">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <i class="icofont-check-circled text-success" style="font-size: 60px;"></i>
+                    </div>
+                    <h4 class="mb-2">Pesan Anda Berhasil Dikirim!</h4>
+                    <p class="text-muted">{{ session('success') }}</p>
+                    <button type="button" class="btn btn-primary mt-3" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Script untuk auto show modal --}}
+    @if (session('success'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                $('#successModal').modal('show');
+            });
+        </script>
+    @endif
 @endsection
