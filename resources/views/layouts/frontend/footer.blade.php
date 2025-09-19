@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="widget">
-                        <h3 class="heading">About Tour</h3>
-                        <p>Get ready for an exciting adventure! This tour is packed with beautiful spots, fun activities,
-                        and plenty of photo opportunities. It’s the perfect way to explore and create unforgettable memories.</p>
+                        <h3 class="heading">About Us</h3>
+                        <p>Penyedia layanan wisata Pangandaran dengan destinasi lengkap, pelayanan ramah, dan harga
+                            terjangkau untuk pengalaman liburan terbaik Anda.</p>
                     </div>
                     <div class="widget">
                         <ul class="list-unstyled social">

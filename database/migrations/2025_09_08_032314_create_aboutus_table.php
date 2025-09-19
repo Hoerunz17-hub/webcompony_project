@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('photo')->nullable();
             $table->text('description')->nullable();
-            $table->enum('is_active', ['active', 'incative'] );
+            $table->enum('is_active', ['active', 'inactive'] );
             $table->timestamps();
         });
     }
