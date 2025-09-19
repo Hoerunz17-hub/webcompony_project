@@ -53,7 +53,6 @@
                     <li class="{{ Request::is('service') ? 'active' : '' }}"><a href="/service">Services</a></li>
                     <li class="{{ Request::is('galery') ? 'active' : '' }}"><a href="/galery">Gallery</a></li>
                     <li class="{{ Request::is('partner') ? 'active' : '' }}"><a href="/partner">Partners</a></li>
-                    <li class="{{ Request::is('testimoni') ? 'active' : '' }}"><a href="/testimoni">Testimonials</a>
                     </li>
                     <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
                 </ul>
@@ -69,7 +68,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="intro-wrap">
-                        <h1 class="mb-5"><span class="d-block">Let's Enjoy Your</span> Trip In <span
+                        <h1 class="mb-5"><span class="d-block">Enjoy Your</span> Trip In <span
                                 class="typed-words"></span></h1>
 
                         <div class="row">
@@ -116,11 +115,11 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="slides">
-                        <img src="{{ asset('assets/images/pantai/pangandaran.jpg') }}" alt="Image" class="img-fluid active">
-                        <img src="{{ asset('assets/images/pantai/Green-Canyon.jpeg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('public/assets/images/pantai/pnd.png') }}" alt="Image" class="img-fluid">
-                        <img src="{{ asset('assets/images/pantai/madasari-beach.jpg') }}" alt="Image" class="img-fluid">
+
+                        @foreach ($heros as $hero)
+                            <img src="{{ asset('storage/' . $hero->photo) }}" alt="Image"class="img-fluid active">
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -134,10 +133,10 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">Our Services</h2>
-                    <p>Pangandaran offers a variety of professional and well-established tour services, providing
-                        customizable travel packages,
-                        adventure activities, and comprehensive arrangements for visitors to enjoy the best of the
-                        region.</p>
+
+                    <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five
+                        Star</p>
+
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -150,53 +149,23 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
 
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-house display-4 text-primary"></span>
-                            <h3>Beautiful Villa</h3>
-                            <p class="mb-0">Perfect for families, or couples who enjoy luxury and independence while
-                                travelling.
-                                Enjoy the space and privacy of these fully-furnished, self-standing mansions —
-                                travellers can cook, and lounge.</p>
-                        </div>
+
+                <div class="col-6 col-sm-6 col-lg-8  feature-1-wrap d-md-flex flex-md-column order-lg-1 ">
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-lg-5 mx-2 feature-1 d-md-flex">
+                                <div class="align-self-center">
+                                    {{-- <span class="flaticon-house display-4 text-primary"></span> --}}
+                                    <img src="{{ asset('storage/' . $service->photo) }}" width="50"
+                                        alt="">
+                                    <h3>{{ $service->title }}</h3>
+                                    <p class="mb-0">{{ $service->description }}
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-
-                    <div class="feature-1 ">
-                        <div class="align-self-center">
-                            <span class="flaticon-restaurant display-4 text-primary"></span>
-                            <h3>Restaurants & Cafe</h3>
-                            <p class="mb-0">Pangandaran offers a rich variety of dining options, from local traditional
-                                warungs
-                                to stylish cafes and beachside restaurants, perfect for every taste and occasion.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
-
-                    <div class="feature-1 d-md-flex">
-                        <div class="align-self-center">
-                            <span class="flaticon-mail display-4 text-primary"></span>
-                            <h3>Easy to Connect</h3>
-                            <p class="mb-0">Pangandaran’s closest train stations are in Banjar (roughly to the north)
-                                and Sidareja
-                                (to the northeast)— both are on the same railway line and are around two hours by bus
-                                from Pangandaran.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-1 ">
-                        <div class="align-self-center">
-                            <span class="flaticon-phone-call display-4 text-primary"></span>
-                            <h3>24/7 Support</h3>
-                            <p class="mb-0">Supported by 24/7 customer support services and a professional expert team,
-                                ensuring maximum uptime and quick response to any issues that may arise.</p>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -255,72 +224,20 @@
 
             <div class="owl-carousel owl-3-slider">
 
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/pantai/plaza-air-mancur-pangandaran.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Plaza Air Mancur Pangandaran</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/plaza-air-mancur-pangandaran.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
 
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/pantai/Wisata-Pantai-di-Pangandaran-1.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Pantai Pangandaran</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/Wisata-Pantai-di-Pangandaran-1.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
+                @foreach ($gallerys as $gallery)
+                    <div class="item">
+                        <a class="media-thumb" href="{{ asset('storage/' . $gallery->photo) }}"
+                            data-fancybox="gallery">
+                            <div class="media-text">
+                                <h3>{{ $gallery->title }}</h3>
+                                <span class="location">{{ $gallery->description }}</span>
+                            </div>
+                            <img src="{{ asset('storage/' . $gallery->photo) }}" alt="Image" class="img-fluid">
+                        </a>
+                    </div>
+                @endforeach
 
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/pantai/pantai-karapyak-sunda.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Pantai Karapyak</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/pantai-karapyak-sunda.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/pantai/kampung-turis.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Wisata Kampung Turis</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/kampung-turis.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset(path: 'assets/images/pantai/jojogan-.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Wonder Hill Jojogan</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/jojogan-.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="media-thumb" href="{{ asset('assets/images/pantai/Gua-Sinjang-Lawang.jpg') }}"
-                        data-fancybox="gallery">
-                        <div class="media-text">
-                            <h3>Goa Sinjang Lawang</h3>
-                            <span class="location">Indonesian</span>
-                        </div>
-                        <img src="{{ asset('assets/images/pantai/Gua-Sinjang-Lawang.jpg') }}" alt="Image" class="img-fluid">
-                    </a>
-                </div>
 
             </div>
 
@@ -336,38 +253,22 @@
                     <h2 class="section-title text-center mb-5">Testimonials</h2>
 
                     <div class="owl-single owl-carousel no-nav">
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Ricardo Asep</h3>
-                            <blockquote>
-                                <p>&ldquo;Explorers will be invited to navigate the swift currents of the Cijulang river
-                                over a track length of approximately 2.5 km or with a duration of 2 to 3 hours.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Iwayang</h3>
-                            <blockquote>
-                                <p>&ldquo;Pangandaran Fun Offroad is an outdoor activity that is perfect for relieving your stress.
-                                Explorers will traverse the land route from the Green Canyon trails to Batu Karas beach.&rdquo;</p>
-                            </blockquote>
-                        </div>
 
-                        <div class="testimonial mx-auto">
-                            <figure class="img-wrap">
-                                <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image" class="img-fluid">
-                            </figure>
-                            <h3 class="name">Kayla Bryant</h3>
-                            <blockquote>
-                                <p>&ldquo;Body Rafting Citumang Pangandaran, one of the Body Rafting spots that 
-                                has become a favorite and popular activity and location among visitors in Pangandaran.&rdquo;</p>
-                            </blockquote>
-                        </div>
+                        @foreach ($testimonials as $testimoni)
+                            <div class="testimonial mx-auto">
+                                <figure class="img-wrap">
+                                    <img src="{{ asset('storage/' . $testimoni->photo_profile) }}" alt="Image"
+                                        class="img-fluid">
+                                </figure>
+                                <h3 class="name">{{ $testimoni->title }}</h3>
+                                <blockquote>
+                                    <p>&ldquo;{{ $testimoni->description }}&rdquo;</p>
+                                </blockquote>
+                            </div>
+                        @endforeach
+
+
 
                     </div>
 
@@ -383,9 +284,9 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-6">
                     <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
-                    <p>Pangandaran Regency (Sundanese script: ᮕᮍᮔ᮪ᮓᮛᮔ᮪) 
-                    is a regency located at the southeastern tip of West Java Province, Indonesia. 
-                    Its capital is Parigi. Pangandaran Regency has an area of 1,011.04 km².</p>
+                    <p>Pangandaran Regency (Sundanese script: ᮕᮍᮔ᮪ᮓᮛᮔ᮪)
+                        is a regency located at the southeastern tip of West Java Province, Indonesia.
+                        Its capital is Parigi. Pangandaran Regency has an area of 1,011.04 km².</p>
                 </div>
             </div>
             <div class="row">
@@ -412,7 +313,8 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pantai-madasari-west-java-indonesia.jpg') }}"
+                        <a href="#" class="d-block mb-3"><img
+                                src="{{ asset('assets/images/pantai/pantai-madasari-west-java-indonesia.jpg') }}"
                                 alt="Image" class="img-fluid"></a>
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
@@ -432,8 +334,9 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('/assets/images/pantai/sungai-citumang.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
+                        <a href="#" class="d-block mb-3"><img
+                                src="{{ asset('/assets/images/pantai/sungai-citumang.jpg') }}" alt="Image"
+                                class="img-fluid"></a>
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
                             <span>Indonesian</span>
@@ -452,8 +355,9 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
+                        <a href="#" class="d-block mb-3"><img
+                                src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}" alt="Image"
+                                class="img-fluid"></a>
 
                         <span class="d-flex align-items-center loc mb-2">
                             <span class="icon-room mr-3"></span>
@@ -482,8 +386,8 @@
 
                 <div class="col-lg-6">
                     <figure class="img-play-video">
-                        <a id="play-video" class="video-play-button" href="https://youtu.be/gm2bD_YX4lk?si=_Fpe2DO8l7ESEmam"
-                            data-fancybox>
+                        <a id="play-video" class="video-play-button"
+                            href="https://youtu.be/gm2bD_YX4lk?si=_Fpe2DO8l7ESEmam" data-fancybox>
                             <span></span>
                         </a>
                         <img src="{{ asset('assets/images/pantai/pnd-thumbnail.jpg') }}" alt="Image"
@@ -493,13 +397,14 @@
 
                 <div class="col-lg-5">
                     <h2 class="section-title text-left mb-4">Take a look at Tour Video</h2>
-                    <p>The name "Pangandaran" has three meanings, namely the word andar, andar-andar, and pangan + daharan. 
-                    Andar-andar, in Sundanese, means "traveler" or "immigrant".
-                    This is because the area was previously a place opened by the Sunda tribe fishermen.</p>
+                    <p>The name "Pangandaran" has three meanings, namely the word andar, andar-andar, and pangan +
+                        daharan.
+                        Andar-andar, in Sundanese, means "traveler" or "immigrant".
+                        This is because the area was previously a place opened by the Sunda tribe fishermen.</p>
 
-                    <p class="mb-4">In the folklore created by the people of Pangandaran, 
-                    Pangandaran was formed when the Pananjung Village was 
-                    first opened by the fishermen of the Sundanese tribe.</p>
+                    <p class="mb-4">In the folklore created by the people of Pangandaran,
+                        Pangandaran was formed when the Pananjung Village was
+                        first opened by the fishermen of the Sundanese tribe.</p>
 
                     <ul class="list-unstyled two-col clearfix">
                         <li>Aquarium Indonesia</li>
@@ -529,8 +434,10 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
-                    <p class="mb-4 lead text-white text-white-opacity">Pangandaran is a town and 
-                    district of Pangandaran Regency within the province of West Java, Indonesia.</p>
+
+                    <p class="mb-4 lead text-white text-white-opacity">Capek Mikirin Masalah Hidup?, Capek Dikerjar
+                        Rentenir? Healing Di PND Solusinya!</p>
+
                     <p class="mb-0"><a href="booking.html"
                             class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
                 </div>
@@ -546,9 +453,11 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="widget">
-                            <h3 class="heading">About Tour</h3>
-                            <p>Get ready for an exciting adventure! This tour is packed with beautiful spots, fun activities,
-                            and plenty of photo opportunities. It’s the perfect way to explore and create unforgettable memories.</p>
+
+                            <h3 class="heading">About Us</h3>
+                            <p>Penyedia layanan wisata Pangandaran dengan destinasi lengkap, pelayanan ramah, dan harga
+                                terjangkau untuk pengalaman liburan terbaik Anda.</p>
+
                         </div>
                         <div class="widget">
                             <ul class="list-unstyled social">
@@ -606,8 +515,8 @@
                         <p>Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co"
-                                class="link-highlight">Untree.co</a>
+                            </script>. All Rights Reserved. &mdash; Designed with love by <a
+                                href="https://untree.co" class="link-highlight">Untree.co</a>
                             <!-- License information: https://untree.co/license/ -->Distributed By <a
                                 href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </p>
@@ -640,18 +549,21 @@
     <script src="{{ asset('assets/js/typed.js') }}"></script>
 
     <script>
-        $(function () {
+        var tes = @json($hirotiles);
+
+        $(function() {
+
             var slides = $('.slides'),
                 images = slides.find('img');
 
-            images.each(function (i) {
+            images.each(function(i) {
                 $(this).attr('data-id', i + 1);
             })
 
             var typed = new Typed('.typed-words', {
-                strings: ["Pantai Pangandaran", " Green Canyon", " Pantai Karang Nini", "Pantai Batu Hiu",
-                    " pantai Madasari"
-                ],
+
+                strings: tes,
+
                 typeSpeed: 80,
                 backSpeed: 80,
                 backDelay: 4000,

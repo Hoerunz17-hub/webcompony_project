@@ -15,8 +15,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Our Contact</h1>
-                        <p class="text-white">Got a question, an idea, or just want to say hi? 
-                        Drop us a message — we’d love to hear from you and help make your trip amazing!</p>
+                        <p class="text-white">Hubungi kami untuk informasi lebih lanjut, pemesanan paket wisata, atau kerja
+                            sama. Kami siap membantu Anda menikmati pengalaman terbaik di Pangandaran. </p>
                     </div>
                 </div>
             </div>
@@ -28,29 +28,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 ml-auto">
-                    <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                    <form action="/contact/store" method="POST" data-aos="fade-up" data-aos-delay="200">
+                        @csrf
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="text-black" for="fname">First name</label>
-                                    <input type="text" class="form-control" id="fname">
+                                    <input type="text" name="firstname" class="form-control" id="firstname">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="text-black" for="lname">Last name</label>
-                                    <input type="text" class="form-control" id="lname">
+                                    <input type="text" name="lastname" class="form-control" id="lastname">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-black" for="email">Email address</label>
-                            <input type="email" class="form-control" id="email">
+                            <label class="text-black" for="email">Subject</label>
+                            <input type="text" name="subject" class="form-control" id="subject">
                         </div>
 
                         <div class="form-group">
                             <label class="text-black" for="message">Message</label>
-                            <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                            <textarea name="description" class="form-control" id="description" cols="30" rows="5"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Send Message</button>

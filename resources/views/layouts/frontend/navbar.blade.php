@@ -1,7 +1,8 @@
 <nav class="site-nav">
     <div class="container">
         <div class="site-navigation">
-            <a href="index.html" class="logo m-0">BLUE HORIZON<span class="text-primary">.</span></a>
+
+            <a href="index.html" class="logo m-0">PANORAID <span class="text-primary">.</span></a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
                 <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
@@ -9,7 +10,6 @@
                 <li class="{{ Request::is('service') ? 'active' : '' }}"><a href="/service">Services</a></li>
                 <li class="{{ Request::is('galery') ? 'active' : '' }}"><a href="/galery">Gallery</a></li>
                 <li class="{{ Request::is('partner') ? 'active' : '' }}"><a href="/partner">Partners</a></li>
-                <li class="{{ Request::is('testimoni') ? 'active' : '' }}"><a href="/testimoni">Testimonials</a>
                 </li>
                 <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
             </ul>
