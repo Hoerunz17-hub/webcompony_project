@@ -13,8 +13,15 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label for="foto" class="form-label">Tambah Foto</label>
+                                    <label for="foto" class="form-label">Ubah Foto</label>
                                     <input type="file" class="form-control" name="foto" id="foto">
+
+                                    @if ($aboutus->photo)
+                                        <div class="mt-2">
+                                            <img src="{{ asset('storage/' . $aboutus->photo) }}" alt="Foto Lama"
+                                                style="width:100px; border-radius:8px;">
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="description" class="form-label">Description</label>

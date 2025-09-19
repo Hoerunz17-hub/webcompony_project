@@ -36,30 +36,18 @@
                                     <textarea class="form-control" name="description" id="description" rows="3">{{ $testimoni->description }}</textarea>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">Rating</label>
-                                    <div class="rating d-flex gap-2">
-                                        <input type="radio" id="rate1" name="rating" value="1"
-                                            {{ $testimoni->rating == 1 ? 'checked' : '' }}>
-                                        <label for="rate1">1</label>
-
-                                        <input type="radio" id="rate2" name="rating" value="2"
-                                            {{ $testimoni->rating == 2 ? 'checked' : '' }}>
-                                        <label for="rate2">2</label>
-
-                                        <input type="radio" id="rate3" name="rating" value="3"
-                                            {{ $testimoni->rating == 3 ? 'checked' : '' }}>
-                                        <label for="rate3">3</label>
-
-                                        <input type="radio" id="rate4" name="rating" value="4"
-                                            {{ $testimoni->rating == 4 ? 'checked' : '' }}>
-                                        <label for="rate4">4</label>
-
-                                        <input type="radio" id="rate5" name="rating" value="5"
-                                            {{ $testimoni->rating == 5 ? 'checked' : '' }}>
-                                        <label for="rate5">5</label>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <label class="form-label me-3 mb-0">Rating</label>
+                                    <div class="star-rating">
+                                        @for ($i = 5; $i >= 1; $i--)
+                                            <input type="radio" id="star{{ $i }}" name="rating"
+                                                value="{{ $i }}" {{ $testimoni->rating == $i ? 'checked' : '' }}>
+                                            <label for="star{{ $i }}"
+                                                title="{{ $i }} stars">&#9733;</label>
+                                        @endfor
                                     </div>
                                 </div>
+
 
                                 <button type="submit" class="btn btn-primary me-2">Tambah</button>
                                 <a href="/admin/testimoni" class="btn btn-secondary">Kembali</a>
@@ -71,4 +59,29 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .star-rating {
+            direction: rtl;
+            display: flex;
+            gap: 5px;
+            font-size: 28px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star-rating input:checked~label,
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #ffc107;
+        }
+    </style>
 @endsection

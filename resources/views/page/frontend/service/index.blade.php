@@ -66,31 +66,32 @@
                     <div class="service text-center">
                         <span class="icon-paper-plane"></span>
                         <h3>Excellence in Travel</h3>
-                        <p>We are committed to providing the best travel experience,
-                            from destination planning to unforgettable adventures.</p>
+                        <p>Kami berkomitmen memberikan pengalaman perjalanan terbaik, dari perencanaan hingga petualangan
+                            yang tak terlupakan di Pangandaran.</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="service text-center">
                         <span class="icon-tag"></span>
                         <h3>Discover Best</h3>
-                        <p>Explore hidden gems, iconic landmarks, and the best l
-                            ocal attractions with our curated recommendations.</p>
+                        <p>ETemukan destinasi indah, pantai eksotis, dan spot wisata terbaik yang hanya kami rekomendasikan
+                            khusus untuk Anda.</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="service text-center">
                         <span class="icon-user"></span>
                         <h3>A New Moments of Life</h3>
-                        <p>Create meaningful memories with every journey you take — because every trip tells a story.</p>
+                        <p>Ciptakan momen berkesan di setiap perjalanan Anda — karena setiap liburan adalah cerita yang akan
+                            selalu dikenang.</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-3">
                     <div class="service text-center">
                         <span class="icon-support"></span>
                         <h3>Joy To Your Journey</h3>
-                        <p>Travel should be fun and inspiring — let us make every moment of your trip joyful and
-                            stress-free.</p>
+                        <p>Liburan harus menyenangkan dan bebas stres — kami pastikan perjalanan Anda di Pangandaran nyaman,
+                            aman, dan penuh keceriaan.</p>
                     </div>
                 </div>
             </div>

@@ -76,7 +76,15 @@
                                                     </td>
                                                     <td>{{ $testimoni->name }}</td>
                                                     <td>{{ $testimoni->description }}</td>
-                                                    <td>{{ $testimoni->rating }}</td>
+                                                    <td>
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            @if ($i <= $testimoni->rating)
+                                                                <span style="color:#ffc107;">&#9733;</span>
+                                                            @else
+                                                                <span style="color:#e4e5e9;">&#9733;</span>
+                                                            @endif
+                                                        @endfor
+                                                    </td>
                                                     <td>
                                                         <div class="form-check form-switch d-flex justify-content-center">
                                                             <input class="form-check-input custom-switch-lg toggle-status"
