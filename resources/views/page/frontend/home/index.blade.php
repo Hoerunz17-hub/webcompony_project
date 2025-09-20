@@ -437,7 +437,7 @@
                     <p class="mb-4 lead text-white text-white-opacity">Capek Mikirin Masalah Hidup?, Capek Dikerjar
                         Rentenir? Healing Di PND Solusinya!</p>
 
-                    <p class="mb-0"><a href="booking.html"
+                    <p class="mb-0"><a href="/contact"
                             class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
                 </div>
             </div>

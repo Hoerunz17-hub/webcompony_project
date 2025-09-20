@@ -15,10 +15,8 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Our Partners</h1>
-
                         <p class="text-white">Didukung oleh mitra terpercaya: Traveloka, The Arnawa Hotel, Wonderful
                             Indonesia, dan Divecenter Pangandaran. </p>
-
                     </div>
                 </div>
             </div>
@@ -27,43 +25,37 @@
 
     <div class="untree_co-section">
         <div class="container">
-            <div class="row justify-content-center g-5">
-                {{-- Item 1 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="assets/images/pantai/logo travoloka.png" class="img-fluid rounded-lg" alt="Traveloka Logo"
-                            style="height: auto; max-width: 100%;">
-                    </a>
-                </div>
+            <div class="row justify-content-center g-4">
+                @foreach ($partner as $partners)
+                    <div class="col-12 col-md-6 col-lg-6 text-center">
+                        <a href="#" class="d-block mb-2">
+                            <img src="{{ asset('storage/' . $partners->photo) }}" class="partner-logo" alt="Traveloka Logo">
+                        </a>
+                        <p class="fw-bold">{{ $partners->description }}</p>
+                    </div>
+                @endforeach
 
-                {{-- Item 2 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="assets/images/pantai/logo arwana.png" class="img-fluid rounded-lg"
-                            alt="The Arnawa Hotel Logo" style="height: auto; max-width: 100%;">
-                    </a>
-                </div>
+
+
+
             </div>
 
-            <div class="row justify-content-center g-5 mt-4">
-                {{-- Item 3 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="assets/images/pantai/logo pnd.png" class="img-fluid rounded-lg"
-                            alt="Dive Center Pangandaran Logo" style="height: auto; max-width: 100%;">
-                    </a>
-                </div>
 
-                {{-- Item 4 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="assets/images/pantai/wonderful.webp" class="img-fluid rounded-lg"
-                            alt="Wonderful Indonesia Logo" style="height: auto; max-width: 100%;">
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
+
+    <style>
+        .partner-logo {
+            max-width: 250px;
+            /* samain semua dengan ukuran traveloka */
+            height: 150px;
+            /* biar tingginya konsisten */
+            object-fit: contain;
+            /* logo tidak ketarik */
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 
     @include('layouts.frontend.blue')
 @endsection
