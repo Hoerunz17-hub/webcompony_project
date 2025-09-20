@@ -74,7 +74,7 @@
                     <div class="service text-center">
                         <span class="icon-tag"></span>
                         <h3>Discover Best</h3>
-                        <p>ETemukan destinasi indah, pantai eksotis, dan spot wisata terbaik yang hanya kami rekomendasikan
+                        <p>Temukan destinasi indah, pantai eksotis, dan spot wisata terbaik yang hanya kami rekomendasikan
                             khusus untuk Anda.</p>
                     </div>
                 </div>
