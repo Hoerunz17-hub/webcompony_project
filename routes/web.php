@@ -25,10 +25,6 @@ Route::get('/service', [ServicesFrontendController::class, 'index']);
 Route::get('/galery', [GalleryFrontendController::class, 'index']);
 Route::get('/partner', [PartnersFrontendController::class, 'index']);
 
-//serch
-Route::get('/search', [SearchFrontendController::class, 'index'])->name('search');
-Route::get('/{slug}', [DestinasiFrontendController::class, 'show'])->name('destinasi.show');
-
 
 
 // Frontend Contact Us
@@ -42,8 +38,6 @@ Route::get('/admin', [DashboardBackendController::class, 'index'])->middleware('
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.process');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-
 
 
 //route about
@@ -145,3 +139,50 @@ Route::post('/admin/media/toggle/{id}', [App\Http\Controllers\Backend\Mediasocia
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//serch
+Route::get('/search', [SearchFrontendController::class, 'index'])->name('search');
+Route::get('/{slug}', [DestinasiFrontendController::class, 'show'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('destinasi.show');

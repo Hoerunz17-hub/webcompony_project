@@ -15,10 +15,9 @@ class SearchFrontendController extends Controller
         $map = [
             'cagar-alam' => 'cagar-alam',
             'green-canyon' => 'green-canyon',
-            'pantai-batu-hiu' => 'pantai-batu-hiu',
             'pantai-batu-karas' => 'pantai-batu-karas',
-            'pantai-karapyak' => 'pantai-karapyak',
-            'pantai-madasari' => 'pantai-madasari',
+            'green-valley' => 'green-valley',
+            'pantai-mandasari' => 'pantai-mandasari',
             'wonder-hill-jojogan' => 'wonder-hill-jojogan',
         ];
 

@@ -79,10 +79,9 @@
                                             <select name="destination" class="form-control custom-select">
                                                 <option value="cagar-alam">Cagar Alam</option>
                                                 <option value="green-canyon">Green Canyon</option>
-                                                <option value="pantai-batu-hiu">Pantai Batu Hiu</option>
                                                 <option value="pantai-batu-karas">Pantai Batu Karas</option>
-                                                <option value="pantai-karapyak">Pantai Karapyak</option>
-                                                <option value="pantai-madasari">Pantai Madasari</option>
+                                                <option value="green-valley">Green Valley</option>
+                                                <option value="pantai-mandasari">Pantai Madasari</option>
                                                 <option value="wonder-hill-jojogan">Wonder Hill Jojogan</option>
                                             </select>
                                         </div>
