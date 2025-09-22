@@ -1829,3 +1829,9 @@ h4,
     object-fit: cover;
     border-radius: 15px;
 }
+.equal-image {
+    width: 100%;
+    height: 380px; /* samain tinggi gambar kanan */
+    object-fit: cover;
+    border-radius: 20px; /* kalau mau sama rounded nya */
+}

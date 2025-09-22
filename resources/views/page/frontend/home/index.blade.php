@@ -73,29 +73,30 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <form class="form">
+                                <form class="form" method="GET" action="{{ route('search') }}">
                                     <div class="row mb-2">
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-                                            <select name="" id="" class="form-control custom-select">
-                                                <option value="">Cagar Alam</option>
-                                                <option value="">Green Canyon</option>
-                                                <option value="">Green Valley</option>
-                                                <option value="">Pantai Batu Hiu</option>
-                                                <option value="">Pantai Batu Karas</option>
-                                                <option value="">Pantai Karapyak</option>
-                                                <option value="">Pantai Madasari</option>
-                                                <option value="">Watersports</option>
-                                                <option value="">Wonder Hill Jojogan</option>
+                                            <select name="destination" class="form-control custom-select">
+                                                <option value="cagar-alam">Cagar Alam</option>
+                                                <option value="green-canyon">Green Canyon</option>
+                                                <option value="pantai-batu-hiu">Pantai Batu Hiu</option>
+                                                <option value="pantai-batu-karas">Pantai Batu Karas</option>
+                                                <option value="pantai-karapyak">Pantai Karapyak</option>
+                                                <option value="pantai-madasari">Pantai Madasari</option>
+                                                <option value="wonder-hill-jojogan">Wonder Hill Jojogan</option>
                                             </select>
                                         </div>
+
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
                                             <input type="text" class="form-control" name="daterange">
                                         </div>
-                                        <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
-                                            <input type="text" class="form-control" placeholder="# of People">
-                                        </div>
 
+                                        <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
+                                            <input type="text" class="form-control" name="people"
+                                                placeholder="# of People">
+                                        </div>
                                     </div>
+
                                     <div class="row align-items-center">
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                                             <input type="submit" class="btn btn-primary btn-block" value="Search">
@@ -103,12 +104,14 @@
                                         <div class="col-lg-8">
                                             <label class="control control--checkbox mt-3">
                                                 <span class="caption">Save this search</span>
-                                                <input type="checkbox" checked="checked" />
+                                                <input type="checkbox" name="save_search" value="1"
+                                                    checked="checked" />
                                                 <div class="control__indicator"></div>
                                             </label>
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -460,14 +463,14 @@
                         </div>
                         <div class="widget">
                             <ul class="list-unstyled social">
-                                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                <li><a href="#"><span class="icon-dribbble"></span></a></li>
-                                <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                                <li><a href="#"><span class="icon-apple"></span></a></li>
-                                <li><a href="#"><span class="icon-google"></span></a></li>
+                                @foreach ($master as $item)
+                                    <li>
+                                        <a href="#" style="background: white;">
+                                            <img src="{{ asset('storage/' . $item->photo) }}" alt="icon"
+                                                style="width:28px; height:28px; object-fit:contain; display:block; z-index: 100;">
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -533,6 +536,53 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
+
+
+    <script>
+        const destinations = [
+            "Cagar Alam",
+            "Green Canyon",
+            "Green Valley",
+            "Pantai Batu Hiu",
+            "Pantai Batu Karas",
+            "Pantai Karapyak",
+            "Pantai Madasari",
+            "Watersports",
+            "Wonder Hill Jojogan"
+        ];
+
+        const input = document.getElementById('destination');
+        const suggestions = document.getElementById('suggestions');
+
+        input.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            suggestions.innerHTML = '';
+
+            if (query.length > 0) {
+                const filtered = destinations.filter(d => d.toLowerCase().includes(query));
+                filtered.forEach(d => {
+                    const item = document.createElement('a');
+                    item.classList.add('list-group-item', 'list-group-item-action');
+                    item.textContent = d;
+                    item.href = "#";
+                    item.onclick = (e) => {
+                        e.preventDefault();
+                        input.value = d;
+                        suggestions.innerHTML = '';
+                    };
+                    suggestions.appendChild(item);
+                });
+            }
+        });
+
+        // hilangkan suggestion kalau klik di luar
+        document.addEventListener('click', function(e) {
+            if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+                suggestions.innerHTML = '';
+            }
+        });
+    </script>
+
 
     <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
