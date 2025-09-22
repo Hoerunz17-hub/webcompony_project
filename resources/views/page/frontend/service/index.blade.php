@@ -128,7 +128,7 @@
                 <div class="col-lg-6 text-center">
                     <h2 class="section-title text-center mb-3">Sejarah</h2>
 
-                    <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five Star
+                    <p>Mengungkap sejarah dan kisah menarik dari berbagai destinasi wisata di Pangandaran.
                     </p>
 
                 </div>
