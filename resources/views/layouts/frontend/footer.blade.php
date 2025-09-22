@@ -10,14 +10,14 @@
                     </div>
                     <div class="widget">
                         <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                            <li><a href="#"><span class="icon-dribbble"></span></a></li>
-                            <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                            <li><a href="#"><span class="icon-apple"></span></a></li>
-                            <li><a href="#"><span class="icon-google"></span></a></li>
+                            @foreach ($master as $item)
+                                <li>
+                                    <a href="#" style="background: white;">
+                                        <img src="{{ asset('storage/' . $item->photo) }}" alt="icon"
+                                            style="width:28px; height:28px; object-fit:contain; display:block; z-index: 100;">
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

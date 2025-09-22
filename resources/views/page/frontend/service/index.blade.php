@@ -13,7 +13,6 @@
 
     <!-- END nav -->
 
-
     <!-- bawah nav -->
     <div class="hero hero-inner">
         <div class="container">
@@ -33,73 +32,7 @@
 
     <!-- end bawah nav -->
 
-    <!-- section image -->
-    <div class="untree_co-section">
-        <div class="container">
-            <div class="row">
 
-                @foreach ($sejarahs as $sejarah)
-                    <div class="col-12 col-md-6 col-lg-3 mb-4">
-                        <div class="media-1 text-center">
-                            <a href="#" class="d-block mb-3">
-                                <img src="{{ asset('storage/' . $sejarah->photo) }}" alt="Image"
-                                    class="img-fluid rounded">
-                            </a>
-                            <h3><a href="#">{{ $sejarah->title }}</a></h3>
-                            <p>{{ $sejarah->description }}</p>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-
-    <!-- END section image -->
-
-
-    <!-- tag -->
-    <div class="untree_co-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service text-center">
-                        <span class="icon-paper-plane"></span>
-                        <h3>Excellence in Travel</h3>
-                        <p>Kami berkomitmen memberikan pengalaman perjalanan terbaik, dari perencanaan hingga petualangan
-                            yang tak terlupakan di Pangandaran.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service text-center">
-                        <span class="icon-tag"></span>
-                        <h3>Discover Best</h3>
-                        <p>Temukan destinasi indah, pantai eksotis, dan spot wisata terbaik yang hanya kami rekomendasikan
-                            khusus untuk Anda.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service text-center">
-                        <span class="icon-user"></span>
-                        <h3>A New Moments of Life</h3>
-                        <p>Ciptakan momen berkesan di setiap perjalanan Anda — karena setiap liburan adalah cerita yang akan
-                            selalu dikenang.</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3">
-                    <div class="service text-center">
-                        <span class="icon-support"></span>
-                        <h3>Joy To Your Journey</h3>
-                        <p>Liburan harus menyenangkan dan bebas stres — kami pastikan perjalanan Anda di Pangandaran nyaman,
-                            aman, dan penuh keceriaan.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END tag -->
-
-    <!-- more service -->
     <div class="untree_co-section">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -149,7 +82,88 @@
 
         </div>
     </div>
+
+    <div class="untree_co-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="service text-center">
+                        <span class="icon-paper-plane"></span>
+                        <h3>Excellence in Travel</h3>
+                        <p>Kami berkomitmen memberikan pengalaman perjalanan terbaik, dari perencanaan hingga petualangan
+                            yang tak terlupakan di Pangandaran.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="service text-center">
+                        <span class="icon-tag"></span>
+                        <h3>Discover Best</h3>
+                        <p>Temukan destinasi indah, pantai eksotis, dan spot wisata terbaik yang hanya kami rekomendasikan
+                            khusus untuk Anda.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="service text-center">
+                        <span class="icon-user"></span>
+                        <h3>A New Moments of Life</h3>
+                        <p>Ciptakan momen berkesan di setiap perjalanan Anda — karena setiap liburan adalah cerita yang akan
+                            selalu dikenang.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="service text-center">
+                        <span class="icon-support"></span>
+                        <h3>Joy To Your Journey</h3>
+                        <p>Liburan harus menyenangkan dan bebas stres — kami pastikan perjalanan Anda di Pangandaran nyaman,
+                            aman, dan penuh keceriaan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- section image -->
+    <div class="untree_co-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2 class="section-title text-center mb-3">Sejarah</h2>
+
+                    <p>Menyediakan Berbagai Layanan Service Mewah Dimulai Dari Hotel Bintang Lima Serta Makanan Five Star
+                    </p>
+
+                </div>
+            </div>
+            <div class="row">
+
+
+
+                @foreach ($sejarahs as $sejarah)
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+                        <div class="media-1 text-center">
+                            <a href="#" class="d-block mb-3">
+                                <img src="{{ asset('storage/' . $sejarah->photo) }}" alt="Image"
+                                    class="img-fluid rounded">
+                            </a>
+                            <h3><a href="#">{{ $sejarah->title }}</a></h3>
+                            <p>{{ $sejarah->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+
+    <!-- END section image -->
+
+
+    <!-- tag -->
+
+    <!-- END tag -->
+
+    <!-- more service -->
+
+
     <!-- END more service -->
 
 

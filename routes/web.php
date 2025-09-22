@@ -12,7 +12,10 @@ use App\Http\Controllers\Frontend\PartnersFrontendController;
 use App\Http\Controllers\Frontend\ServicesFrontendController;
 use App\Http\Controllers\Backend\MediasocialBackendController;
 use App\Http\Controllers\Frontend\ContactusFrontendController;
+use App\Http\Controllers\Frontend\DestinasiFrontendController;
+use App\Http\Controllers\Frontend\GreencanyonFrontendController;
 use App\Http\Controllers\Frontend\HomeFrontendController;
+use App\Http\Controllers\Frontend\SearchFrontendController;
 use App\Http\Controllers\Frontend\TestimonialsFrontendController;
 
 //Route view frontend
@@ -21,6 +24,12 @@ Route::get('/about', [AboutusFrontendController::class, 'index']);
 Route::get('/service', [ServicesFrontendController::class, 'index']);
 Route::get('/galery', [GalleryFrontendController::class, 'index']);
 Route::get('/partner', [PartnersFrontendController::class, 'index']);
+
+//serch
+Route::get('/search', [SearchFrontendController::class, 'index'])->name('search');
+Route::get('/{slug}', [DestinasiFrontendController::class, 'show'])->name('destinasi.show');
+
+
 
 // Frontend Contact Us
 Route::get('/contact', [ContactusFrontendController::class, 'index']);
