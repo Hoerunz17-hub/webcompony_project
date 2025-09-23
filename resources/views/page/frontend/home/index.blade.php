@@ -75,15 +75,10 @@
                             <div class="col-12">
                                 <form class="form" method="GET" action="{{ route('search') }}">
                                     <div class="row mb-2">
-                                        <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-                                            <select name="destination" class="form-control custom-select">
-                                                <option value="cagar-alam">Cagar Alam</option>
-                                                <option value="green-canyon">Green Canyon</option>
-                                                <option value="pantai-batu-karas">Pantai Batu Karas</option>
-                                                <option value="green-valley">Green Valley</option>
-                                                <option value="pantai-mandasari">Pantai Madasari</option>
-                                                <option value="wonder-hill-jojogan">Wonder Hill Jojogan</option>
-                                            </select>
+                                        <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4 position-relative">
+                                            <input type="text" id="destination" name="destination"
+                                                class="form-control" placeholder="Cari destinasi...">
+                                            <div id="suggestions" class="list-group position-absolute w-100"></div>
                                         </div>
 
                                         <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
@@ -110,6 +105,7 @@
                                         </div>
                                     </div>
                                 </form>
+
 
                             </div>
                         </div>
@@ -539,15 +535,12 @@
 
     <script>
         const destinations = [
-            "Cagar Alam",
-            "Green Canyon",
-            "Green Valley",
-            "Pantai Batu Hiu",
-            "Pantai Batu Karas",
-            "Pantai Karapyak",
-            "Pantai Madasari",
-            "Watersports",
-            "Wonder Hill Jojogan"
+            "cagar-alam",
+            "green-canyon",
+            "green-valley",
+            "pantai-batu-karas",
+            "pantai-madasari",
+            "wonder-hill-jojogan"
         ];
 
         const input = document.getElementById('destination');
@@ -558,7 +551,7 @@
             suggestions.innerHTML = '';
 
             if (query.length > 0) {
-                const filtered = destinations.filter(d => d.toLowerCase().includes(query));
+                const filtered = destinations.filter(d => d.includes(query));
                 filtered.forEach(d => {
                     const item = document.createElement('a');
                     item.classList.add('list-group-item', 'list-group-item-action');

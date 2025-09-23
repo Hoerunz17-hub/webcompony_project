@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang green Valley</h2>
                     <p>Sungai Citumang, yang juga dikenal sebagai Green Valley, adalah destinasi wisata alam di Pangandaran
                         yang menawarkan petualangan di sungai dengan air jernih berwarna hijau kebiruan. Lokasinya berada di
                         Desa Bojong, Kecamatan Parigi, Kabupaten Pangandaran, dan tidak terlalu jauh dari Pantai

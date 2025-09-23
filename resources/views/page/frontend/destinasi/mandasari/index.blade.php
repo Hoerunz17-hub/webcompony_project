@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang Pantai Madasari</h2>
                     <p>Pantai Madasari adalah destinasi wisata yang menawarkan keindahan alam yang masih asli dan suasana
                         yang tenang di wilayah Pangandaran. Pantai ini terkenal dengan gugusan pulau-pulau karang kecil yang
                         indah, terutama saat air laut surut.</p>

@@ -43,13 +43,13 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang Cagar Alam</h2>
                     <p>kawasan konservasi alam yang menawarkan kombinasi menarik antara hutan tropis, pantai pasir putih,
                         ekosistem laut, serta situs-situs bersejarah. Bersebelahan dengan Taman Wisata Alam (TWA), tempat
                         ini menjadi destinasi populer bagi wisatawan yang ingin menikmati wisata alam sekaligus edukasi
                         lingkungan.</p>
                     <ul class="list-unstyled two-col clearfix">
-                        <li>Menjelajahi gua-gua eksotis:</li>
+                        <li>Menjelajahi gua-gua eksotis</li>
                         <li>Pengamatan satwa liar</li>
                         <li>Snorkeling dan pemandangan bawah laut</li>
                         <li>Pengamatan flora</li>
