@@ -42,11 +42,12 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang Green Canyon</h2>
                     <p>Green Canyon adalah salah satu destinasi wisata alam terbaik di Pangandaran, terkenal dengan aliran
-                        sungainya yang jernih, tebing hijau yang menjulang, serta suasana alam yang menenangkan. Tempat ini
-                        menjadi favorit wisatawan untuk body rafting, berenang, hingga menikmati panorama indah sepanjang
-                        sungai.</p>
+                        sungainya yang jernih, tebing hijau yang menjulang, serta suasana alam yang menenangkan. Nama asli
+                        Green Canyon adalah "Cukang Taneuh" yang berarti "jembatan tanah" dalam bahasa Sunda. Nama ini
+                        merujuk pada adanya tonjolan atau jembatan alami dari bebatuan yang menghubungkan dua sisi sunga.
+                    </p>
                     <ul class="list-unstyled two-col clearfix">
                         <li>Body Rafting</li>
                         <li>Perahu Wisata</li>

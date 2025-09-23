@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang Batu Karas</h2>
                     <p>Pantai Batu Karas adalah destinasi wisata populer yang terletak di Desa Batu Karas, Kecamatan
                         Cijulang, Kabupaten Pangandaran, Jawa Barat. Dikenal sebagai surga bagi peselancar pemula, pantai
                         ini menawarkan kombinasi antara ombak yang ideal, pemandangan alam yang memukau, dan suasana yang

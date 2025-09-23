@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 pl-lg-5 ml-auto">
-                    <h2 class="section-title mb-4">About Tours</h2>
+                    <h2 class="section-title mb-4">Tentang Wonder Hill Jojogan</h2>
                     <p>Wonder Hill Jojogan adalah ekowisata perbukitan di Pangandaran yang menawarkan pemandangan alam yang
                         indah dari ketinggian sekitar 1.000 mdpl. Pengunjung dapat melihat panorama pegunungan, laut
                         Pangandaran, dan bahkan Pulau Nusakambangan</p>
