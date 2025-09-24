@@ -9,7 +9,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-12">
                                 <div class="page-header-title border-bottom pb-2 mb-2">
-                                    <h4 class="mb-0">Gallery</h4>
+                                    <h4 class="mb-0">Populer Destinasi</h4>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -20,7 +20,7 @@
                                         </a>
                                     </li>
                                     <li class="breadcrumb-item">
-                                        <a href="javascript:void(0)">Gallery</a>
+                                        <a href="javascript:void(0)">Populer Destinasi</a>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">Index</li>
                                 </ul>
@@ -35,7 +35,7 @@
                     <div class="card table-card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5>Aktivitas Terbaru</h5>
-                            <a href="/admin/galery/create" class="btn fw-bold text-white"
+                            <a href="/admin/destinasi/create" class="btn fw-bold text-white"
                                 style="background:#00ff66; border-radius:6px; padding:6px 18px;">
                                 + Tambah
                             </a>
@@ -54,39 +54,40 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($galerys->isEmpty())
+                                        @if ($destinasis->isEmpty())
                                             <tr>
-                                                <td colspan="7" class="text-center">No Gallery found.</td>
+                                                <td colspan="7" class="text-center">No Section found.</td>
                                             </tr>
                                         @endif
-                                        @foreach ($galerys as $galery)
+                                        @foreach ($destinasis as $destinasi)
                                             <tr class="text-center">
-                                                <td>{{ $galery->id }}</td>
+                                                <td>{{ $destinasi->id }}</td>
                                                 <td>
-                                                    @if ($galery->photo)
-                                                        <img src="{{ asset('storage/' . $galery->photo) }}" alt="Hero Image"
+                                                    @if ($destinasi->photo)
+                                                        <img src="{{ asset('storage/' . $destinasi->photo) }}"
+                                                            alt="Hero Image"
                                                             style="width: 100px; height: auto; display:block; margin:0 auto;">
                                                     @else
                                                         <span class="text-muted">No image</span>
                                                     @endif
                                                 </td>
-                                                <td>{{ $galery->title }}</td>
-                                                <td>{{ $galery->description }}</td>
+                                                <td>{{ $destinasi->title }}</td>
+                                                <td>{{ $destinasi->description }}</td>
                                                 <td>
                                                     <div class="form-check form-switch d-flex justify-content-center">
                                                         <input class="form-check-input custom-switch-lg toggle-status"
-                                                            type="checkbox" role="switch" data-id="{{ $galery->id }}"
-                                                            {{ $galery->is_active === 'active' ? 'checked' : '' }}>
+                                                            type="checkbox" role="switch" data-id="{{ $destinasi->id }}"
+                                                            {{ $destinasi->is_active === 'active' ? 'checked' : '' }}>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="/admin/galery/edit/{{ $galery->id }}"
+                                                    <a href="/admin/destinasi/edit/{{ $destinasi->id }}"
                                                         style="background:#00b4ff; color:#fff; border-radius:6px; padding:4px 16px;
                                                           text-decoration:none; margin-right:6px; font-size:14px; display:inline-block;">
                                                         Edit
                                                     </a>
                                                     <a onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
-                                                        href="/admin/galery/delete/{{ $galery->id }}"
+                                                        href="/admin/destinasi/delete/{{ $destinasi->id }}"
                                                         style="background:#ff4d6d; color:#fff; border-radius:6px; padding:4px 16px;
                                                           text-decoration:none; font-size:14px; display:inline-block;">
                                                         Delete
@@ -130,13 +131,17 @@
             document.querySelectorAll(".toggle-status").forEach(function(checkbox) {
                 checkbox.addEventListener("change", function() {
                     let id = this.getAttribute("data-id");
+                    let status = this.checked ? 1 : 0;
 
-                    fetch(`/admin/galery/toggle/${id}`, {
+                    fetch(`/admin/destinasi/toggle/${id}`, {
                             method: "POST",
                             headers: {
                                 "X-CSRF-TOKEN": "{{ csrf_token() }}",
                                 "Content-Type": "application/json"
                             },
+                            body: JSON.stringify({
+                                status: status
+                            })
                         })
                         .then(response => response.json())
                         .then(data => {

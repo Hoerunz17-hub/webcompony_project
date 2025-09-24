@@ -120,6 +120,39 @@ Route::post('/admin/partner/toggle/{id}', [App\Http\Controllers\Backend\Partners
 
 
 
+//Route Pengunjungsection
+Route::get('/admin/pengunjung', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'index']);
+Route::get('/admin/pengunjung/create', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'create']);
+Route::post('/admin/pengunjung/store', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'store']);
+Route::get('/admin/pengunjung/delete/{id}', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'destroy']);
+Route::get('/admin/pengunjung/edit/{id}', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'edit']);
+Route::post('/admin/pengunjung/update/{id}', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'update']);
+Route::post('/admin/pengunjung/toggle/{id}', [App\Http\Controllers\Backend\PengunjungBackendController::class, 'toggle']);
+
+
+//Route sectionoffers
+Route::get('/admin/discont', [App\Http\Controllers\Backend\OffersBackendController::class, 'index']);
+Route::get('/admin/discont/create', [App\Http\Controllers\Backend\OffersBackendController::class, 'create']);
+Route::post('/admin/discont/store', [App\Http\Controllers\Backend\OffersBackendController::class, 'store']);
+Route::get('/admin/discont/delete/{id}', [App\Http\Controllers\Backend\OffersBackendController::class, 'destroy']);
+Route::get('/admin/discont/edit/{id}', [App\Http\Controllers\Backend\OffersBackendController::class, 'edit']);
+Route::post('/admin/discont/update/{id}', [App\Http\Controllers\Backend\OffersBackendController::class, 'update']);
+Route::post('/admin/discont/toggle/{id}', [App\Http\Controllers\Backend\OffersBackendController::class, 'toggle']);
+
+
+//Route Sectiondestinasi
+Route::get('/admin/destinasi', [App\Http\Controllers\Backend\PopulerBackendController::class, 'index']);
+Route::get('/admin/destinasi/create', [App\Http\Controllers\Backend\PopulerBackendController::class, 'create']);
+Route::post('/admin/destinasi/store', [App\Http\Controllers\Backend\PopulerBackendController::class, 'store']);
+Route::get('/admin/destinasi/delete/{id}', [App\Http\Controllers\Backend\PopulerBackendController::class, 'destroy']);
+Route::get('/admin/destinasi/edit/{id}', [App\Http\Controllers\Backend\PopulerBackendController::class, 'edit']);
+Route::post('/admin/destinasi/update/{id}', [App\Http\Controllers\Backend\PopulerBackendController::class, 'update']);
+Route::post('/admin/destinasi/toggle/{id}', [App\Http\Controllers\Backend\PopulerBackendController::class, 'toggle']);
+
+
+
+
+
 //Route Contact Us
 Route::get('/admin/contact',[App\Http\Controllers\Backend\ContactusBackendController::class, 'index']);
 Route::get('/admin/contact/show/{id}', [App\Http\Controllers\Backend\ContactusBackendController::class, 'show']);
