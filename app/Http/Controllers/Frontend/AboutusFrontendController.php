@@ -10,11 +10,14 @@ use Illuminate\Http\Request;
 
 class AboutusFrontendController extends Controller
 {
-    public function index()
-    {
-        $abouts = Aboutus::where('is_active', 'active')->get();
-        $tenagakerjas = TenagaKerja::where('is_active', 'active')->get();
-        $testimonials = Testimonials::where('is_active', 'active')->get();
-        return view('page.frontend.about.index', compact('abouts','tenagakerjas', 'testimonials'));
-    }
+            public function index()
+            {
+                $abouts = Aboutus::where('is_active', 'active')->get();
+                $about = Aboutus::where('is_active', 'active')->first();
+                $tenagakerjas = TenagaKerja::where('is_active', 'active')->get();
+                $testimonials = Testimonials::where('is_active', 'active')->get();
+
+                return view('page.frontend.about.index', compact('abouts','about','tenagakerjas','testimonials'));
+            }
+
 }
