@@ -56,7 +56,38 @@
 
 
 
+            <!-- Recent Orders start -->
+            <div class="col-sm-12">
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h5>Aktivitas Terbaru</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>Nama Pengunjung</th>
+                                    <th>Destinasi</th>
+                                    <th>Ulasan Singkat</th>
+                                    <th>Tanggal Ulasan</th>
+                                    <th>Tipe Kunjungan</th>
 
+                                </tr>
+                                <tr>
+                                    <td>Sahroni</td>
+                                    <td>Cagar Alam</td>
+                                    <td>Disana Ada Banyak Berbagai satwa Liar </td>
+                                    <td>17-07-25</td>
+                                    <td>Keluarga</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 

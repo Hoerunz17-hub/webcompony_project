@@ -77,6 +77,24 @@
                     </a>
                 </li>
 
+                <li class="pc-item {{ Request::is('admin/pengunjung*') ? 'active' : '' }}">
+                    <a href="/admin/pengunjung" class="pc-link">
+                        <span><i></i></span><span class="pc-mtext">Section Pengunjung</span>
+                    </a>
+                </li>
+
+                <li class="pc-item {{ Request::is('admin/discont*') ? 'active' : '' }}">
+                    <a href="/admin/discont" class="pc-link">
+                        <span><i></i></span><span class="pc-mtext">Section Offers</span>
+                    </a>
+                </li>
+
+                <li class="pc-item {{ Request::is('admin/destinasi*') ? 'active' : '' }}">
+                    <a href="/admin/destinasi" class="pc-link">
+                        <span><i></i></span><span class="pc-mtext">Section Destinasi</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

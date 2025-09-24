@@ -218,15 +218,15 @@
             </div>
 
             <div class="owl-carousel owl-3-slider">
-                @foreach ($gallerys as $gallery)
+                @foreach ($destinasis as $destinasi)
                     <div class="item">
-                        <a class="media-thumb" href="{{ asset('storage/' . $gallery->photo) }}"
-                            data-fancybox="gallery">
+                        <a class="media-thumb" href="{{ asset('storage/' . $destinasi->photo) }}"
+                            data-fancybox="destinasi">
                             <div class="media-text">
-                                <h3>{{ $gallery->title }}</h3>
-                                <span class="location">{{ $gallery->description }}</span>
+                                <h3>{{ $destinasi->title }}</h3>
+                                <span class="location">{{ $destinasi->description }}</span>
                             </div>
-                            <img src="{{ asset('storage/' . $gallery->photo) }}" alt="Image" class="img-fluid">
+                            <img src="{{ asset('storage/' . $destinasi->photo) }}" alt="Image" class="img-fluid">
                         </a>
                     </div>
                 @endforeach
@@ -288,91 +288,32 @@
             </div>
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/pantai/Green-Canyon.jpeg') }}" alt="Image"
-                                class="img-fluid"></a>
-                        <span class="d-flex align-items-center loc mb-2">
-                            <span class="icon-room mr-3"></span>
-                            <span>Indonesian</span>
-                        </span>
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h3><a href="#">Green Canyon</a></h3>
-                                <div class="price ml-auto">
-                                    <span>Rp. 10.000</span>
+                    @foreach ($disconts as $discont)
+                        <div class="media-1">
+                            <a href="#" class="d-block mb-3"><img
+                                    src="{{ asset('storage/' . $discont->photo) }}" alt="Image"
+                                    class="img-fluid"></a>
+                            <span class="d-flex align-items-center loc mb-2">
+                                <span class="icon-room mr-3"></span>
+                                <span>Indonesian</span>
+                            </span>
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h3><a href="#">{{ $discont->title }}</a></h3>
+                                    <div class="price ml-auto">
+                                        <span>{{ $discont->description }}</span>
+                                    </div>
                                 </div>
+
                             </div>
 
                         </div>
+                    @endforeach
 
-                    </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/pantai/pantai-madasari-west-java-indonesia.jpg') }}"
-                                alt="Image" class="img-fluid"></a>
-                        <span class="d-flex align-items-center loc mb-2">
-                            <span class="icon-room mr-3"></span>
-                            <span>Indonesian</span>
-                        </span>
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h3><a href="#">Pantai Madasari</a></h3>
-                                <div class="price ml-auto">
-                                    <span>Rp. 5.000</span>
-                                </div>
-                            </div>
 
-                        </div>
 
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('/assets/images/pantai/sungai-citumang.jpg') }}" alt="Image"
-                                class="img-fluid"></a>
-                        <span class="d-flex align-items-center loc mb-2">
-                            <span class="icon-room mr-3"></span>
-                            <span>Indonesian</span>
-                        </span>
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h3><a href="#">Sungai Citumang</a></h3>
-                                <div class="price ml-auto">
-                                    <span>Rp. 20.000</span>
-                                </div>
-                            </div>
 
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <div class="media-1">
-                        <a href="#" class="d-block mb-3"><img
-                                src="{{ asset('assets/images/pantai/pantai-karang-nini.jpg') }}" alt="Image"
-                                class="img-fluid"></a>
-
-                        <span class="d-flex align-items-center loc mb-2">
-                            <span class="icon-room mr-3"></span>
-                            <span>Indonesian</span>
-                        </span>
-
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h3><a href="#">Pantai Karang Nini</a></h3>
-                                <div class="price ml-auto">
-                                    <span>Rp. 7.500</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
