@@ -82,18 +82,18 @@
             <div class="row justify-content-center">
                 @foreach ($tenagakerjas as $tenagakerja)
                     <div class="col-lg-3 mb-4">
-                        <div class="team">
-                            <img src="{{ asset('storage/' . $tenagakerja->photo) }}" alt="Image"
-                                class="img-fluid mb-4 rounded-20">
-                            <div class="px-3">
+                        <div class="team text-center">
+                            <div class="team-photo">
+                                <img src="{{ asset('storage/' . $tenagakerja->photo) }}" alt="Image"
+                                    class="img-fluid rounded-20">
+                            </div>
+                            <div class="px-3 mt-3">
                                 <h3 class="mb-0">{{ $tenagakerja->name }}</h3>
                                 <p>{{ $tenagakerja->position }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
-
             </div>
 
         </div>

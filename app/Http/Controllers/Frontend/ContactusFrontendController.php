@@ -15,23 +15,24 @@ class ContactusFrontendController extends Controller
     }
 
     // simpan data dari form contact us FE
-    public function store(Request $request)
-    {
-        $request->validate([
-            'firstname'   => 'required',
-            'lastname'    => 'required',
-            'subject'     => 'required',
-            'description' => 'required',
-        ]);
+                public function store(Request $request)
+                {
+                    $request->validate([
+                        'firstname'   => 'required',
+                        'lastname'    => 'required',
+                        'subject'     => 'required',
+                        'description' => 'required',
+                    ]);
 
-        Contactus::create([
-            'first_name'  => $request->firstname,
-            'last_name'   => $request->lastname,
-            'subject'     => $request->subject,
-            'description' => $request->description,
-        ]);
+                    Contactus::create([
+                        'first_name'  => $request->firstname,
+                        'last_name'   => $request->lastname,
+                        'subject'     => $request->subject,
+                        'description' => $request->description,
+                        'is_active'   => 'inactive', // 👈 selalu Belum Dibaca ketika user kirim
+                    ]);
 
-        // kembali ke halaman contact FE, bukan admin
-        return redirect('/contact')->with('success', 'Pesan berhasil dikirim!');
-    }
+                    return redirect('/contact')->with('success', 'Pesan berhasil dikirim!');
+                }
+
 }

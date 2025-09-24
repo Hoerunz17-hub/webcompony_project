@@ -122,7 +122,6 @@ Route::post('/admin/partner/toggle/{id}', [App\Http\Controllers\Backend\Partners
 
 //Route Contact Us
 Route::get('/admin/contact',[App\Http\Controllers\Backend\ContactusBackendController::class, 'index']);
-Route::post('/admin/contact/toggle/{id}', [App\Http\Controllers\Backend\ContactusBackendController::class, 'toggleStatus']);
 Route::get('/admin/contact/show/{id}', [App\Http\Controllers\Backend\ContactusBackendController::class, 'show']);
 
 

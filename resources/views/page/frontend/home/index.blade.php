@@ -573,6 +573,30 @@
                 suggestions.innerHTML = '';
             }
         });
+
+        let currentIndex = -1;
+
+        input.addEventListener('keydown', function(e) {
+            const items = suggestions.querySelectorAll('.list-group-item');
+            if (items.length > 0) {
+                if (e.key === 'ArrowDown') {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    items.forEach(i => i.classList.remove('active'));
+                    items[currentIndex].classList.add('active');
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp') {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                    items.forEach(i => i.classList.remove('active'));
+                    items[currentIndex].classList.add('active');
+                    e.preventDefault();
+                } else if (e.key === 'Enter' && currentIndex > -1) {
+                    e.preventDefault();
+                    input.value = items[currentIndex].textContent;
+                    suggestions.innerHTML = '';
+                    currentIndex = -1;
+                }
+            }
+        });
     </script>
 
 

@@ -1835,3 +1835,35 @@ h4,
     object-fit: cover;
     border-radius: 20px; /* kalau mau sama rounded nya */
 }
+#suggestions {
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#suggestions .list-group-item {
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+#suggestions .list-group-item:hover,
+#suggestions .list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+.team-photo {
+    width: 100%;
+    height: 350px; /* bisa sesuaikan misalnya 320px atau 300px */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* biar rapih kayak contoh */
+    object-position: center; /* fokus di tengah */
+}

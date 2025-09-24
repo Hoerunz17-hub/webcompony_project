@@ -62,11 +62,10 @@
                                                 <td>{{ $contactus->subject }}</td>
                                                 <td>{{ $contactus->description }}</td>
                                                 <td>
-                                                    <div class="form-check form-switch d-flex justify-content-center">
-                                                        <input class="form-check-input custom-switch-lg toggle-status"
-                                                            type="checkbox" role="switch" data-id="{{ $contactus->id }}"
-                                                            {{ $contactus->is_active === 'active' ? 'checked' : '' }}>
-                                                    </div>
+                                                    <span
+                                                        class="badge {{ $contactus->is_active === 'active' ? 'bg-success' : 'bg-secondary' }}">
+                                                        {{ $contactus->is_active === 'active' ? 'Dibaca' : 'Belum Dibaca' }}
+                                                    </span>
                                                 </td>
                                                 <td>
                                                     <a href="/admin/contact/show/{{ $contactus->id }}"
@@ -74,8 +73,8 @@
                                                           text-decoration:none; margin-right:6px; font-size:14px; display:inline-block;">
                                                         Show
                                                     </a>
-
                                                 </td>
+
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -125,6 +124,35 @@
                         .then(response => response.json())
                         .then(data => {
                             console.log("Status updated:", data);
+                        })
+                        .catch(error => console.error("Error:", error));
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".toggle-status").forEach(function(checkbox) {
+                checkbox.addEventListener("change", function() {
+                    let id = this.getAttribute("data-id");
+                    let statusLabel = this.closest("div").querySelector(".status-label");
+
+                    fetch(`/admin/contact/toggle/${id}`, {
+                            method: "POST",
+                            headers: {
+                                "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                                "Content-Type": "application/json"
+                            },
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("Status updated:", data);
+
+                            // Update teks label berdasarkan status baru
+                            if (this.checked) {
+                                statusLabel.textContent = "Dibaca";
+                            } else {
+                                statusLabel.textContent = "Belum Dibaca";
+                            }
                         })
                         .catch(error => console.error("Error:", error));
                 });
