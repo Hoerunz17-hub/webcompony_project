@@ -18,26 +18,23 @@ class ContactusBackendController extends Controller
 
 
 
-        public function show($id){
-            $datacontact = Contactus::find($id);
-            if($datacontact == null){
-                return redirect('/admin/contact')->with( 'success', 'Data Berhasil Ditambahkan');
-            }
+                    public function show($id)
+                {
+                    $datacontact = Contactus::find($id);
 
-            return view('page.backend.contact.show', compact('datacontact'));
-        }
+                    if (!$datacontact) {
+                        return redirect('/admin/contact')->with('error', 'Data tidak ditemukan');
+                    }
 
-            public function toggleStatus($id)
-        {
-            $contact = Contactus::findOrFail($id);
+                    // kalau belum dibaca → ubah jadi dibaca
+                    if ($datacontact->is_active !== 'active') {
+                        $datacontact->is_active = 'active';
+                        $datacontact->save();
+                    }
 
-            $contact->is_active = $contact->is_active === 'active' ? 'inactive' : 'active';
-            $contact->save();
+                    return view('page.backend.contact.show', compact('datacontact'));
+                }
 
-            return response()->json([
-                'success' => true,
-                'status' => $contact->is_active
-            ]);
-        }
+
 
 }

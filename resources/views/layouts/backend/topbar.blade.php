@@ -19,21 +19,7 @@
                         <i class="ph ph-list"></i>
                     </a>
                 </li>
-                <li class="dropdown pc-h-item">
-                    <a class="pc-head-link dropdown-toggle arrow-none m-0" data-bs-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="false" aria-expanded="false">
-                        <i class="ph ph-magnifying-glass"></i>
-                    </a>
-                    <div class="dropdown-menu pc-h-dropdown drp-search">
-                        <form class="px-3">
-                            <div class="form-group mb-0 d-flex align-items-center">
-                                <input type="search" class="form-control border-0 shadow-none"
-                                    placeholder="Search here. . ." />
-                                <button class="btn btn-light-secondary btn-search">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </li>
+
             </ul>
         </div>
         <!-- [Mobile Media Block end] -->
@@ -51,47 +37,15 @@
                                 style="max-height: calc(100vh - 225px)">
                                 <ul class="list-group list-group-flush w-100">
                                     <li class="list-group-item">
-                                        <a href="https://codedthemes.com/item/gradient-able-admin-template/"
-                                            target="_blank" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-arrow-circle-down"></i>
-                                                <span>Download</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="#" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-user-circle"></i>
-                                                <span>Edit profile</span>
-                                            </span>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-bell"></i>
-                                                <span>Notifications</span>
-                                            </span>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-gear-six"></i>
-                                                <span>Settings</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="#" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-plus-circle"></i>
-                                                <span>Add account</span>
-                                            </span>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <span class="d-flex align-items-center">
-                                                <i class="ph ph-power"></i>
+                                        <form action="{{ route('logout') }}" method="POST" class="m-0 p-0">
+                                            @csrf
+                                            <button type="submit"
+                                                class="dropdown-item d-flex align-items-center text-danger">
+                                                <i class="ph ph-power me-2"></i>
                                                 <span>Logout</span>
-                                            </span>
-                                        </a>
+                                            </button>
+                                        </form>
+
                                     </li>
                                 </ul>
                             </div>
