@@ -1,24 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Middleware;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
-class AuthController extends Controller
+class Authenticate extends Middleware
 {
-    // ...
-
-    public function logout(Request $request)
+    protected function redirectTo($request): ?string
     {
-        Auth::logout(); // logout user
-
-        // invalidate session biar aman
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        // arahkan ke login page
-        return redirect()->route('login')->with('success', 'Anda berhasil logout!');
+        return $request->expectsJson() ? null : route('login');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
 use App\Models\Hero;
+use App\Models\Pengunjung;
 use App\Models\Populer;
 use App\Models\Services;
 use App\Models\Special;
@@ -22,9 +23,10 @@ class HomeFrontendController extends Controller
          $destinasis = Populer::where('is_active', 'active')->get();
          $disconts = Special::where('is_active', 'active')->get();
          $testimonials = Testimonials::where('is_active', 'active')->get();
+         $pengunjungs = Pengunjung::where('is_active', 'active')->get();
 
 
-        return view('page.frontend.home.index', compact('heros', 'hirotiles', 'services', 'testimonials', 'destinasis', 'disconts'));
+        return view('page.frontend.home.index', compact('heros', 'hirotiles', 'services', 'testimonials', 'destinasis', 'disconts', 'pengunjungs'));
     }
 
 
