@@ -170,42 +170,23 @@
 
     <div class="untree_co-section count-numbers py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                    <div class="counter-wrap">
-                        <div class="counter">
-                            <span class="" data-number="9313">0</span>
+            <div class="row justify-content-center g-4">
+                @foreach ($pengunjungs as $pengunjung)
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-wrap text-center p-3">
+                            <div class="counter mb-3">
+                                <span data-number="{{ $pengunjung->name }}">
+                                    {{ $pengunjung->name }}
+                                </span>
+                            </div>
+                            <span class="caption d-block">{{ $pengunjung->description }}</span>
                         </div>
-                        <span class="caption">No. of Travels</span>
                     </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                    <div class="counter-wrap">
-                        <div class="counter">
-                            <span class="" data-number="8492">0</span>
-                        </div>
-                        <span class="caption">No. of Clients</span>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                    <div class="counter-wrap">
-                        <div class="counter">
-                            <span class="" data-number="100">0</span>
-                        </div>
-                        <span class="caption">No. of Employees</span>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                    <div class="counter-wrap">
-                        <div class="counter">
-                            <span class="" data-number="120">0</span>
-                        </div>
-                        <span class="caption">No. of Countries</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
+
 
 
     <!-- destinasi -->
@@ -287,15 +268,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    @foreach ($disconts as $discont)
+                @foreach ($disconts as $discont)
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4">
                         <div class="media-1">
-                            <a href="#" class="d-block mb-3"><img
-                                    src="{{ asset('storage/' . $discont->photo) }}" alt="Image"
-                                    class="img-fluid"></a>
+                            <a href="#" class="d-block mb-3">
+                                <img src="{{ asset('storage/' . $discont->photo) }}" alt="Image"
+                                    class="img-fluid rounded">
+                            </a>
                             <span class="d-flex align-items-center loc mb-2">
                                 <span class="icon-room mr-3"></span>
-                                <span>Indonesian</span>
+                                <span>Pangandaran</span>
                             </span>
                             <div class="d-flex align-items-center">
                                 <div>
@@ -304,17 +286,12 @@
                                         <span>{{ $discont->description }}</span>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-                    @endforeach
-
-                </div>
-
-
-
+                    </div>
+                @endforeach
             </div>
+
         </div>
     </div>
 

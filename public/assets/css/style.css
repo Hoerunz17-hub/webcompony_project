@@ -1867,3 +1867,9 @@ h4,
     object-fit: cover; /* biar rapih kayak contoh */
     object-position: center; /* fokus di tengah */
 }
+.fixed-img {
+    width: 100%;
+    height: 500px; /* bisa kamu sesuaikan, misalnya 350px */
+    object-fit: cover;
+    border-radius: 12px;
+}

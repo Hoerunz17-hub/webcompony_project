@@ -28,46 +28,21 @@
 
     <div class="untree_co-section">
         <div class="container">
-            <div class="row justify-content-center g-5">
-                {{-- Item 1 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/pantai/madasari-beach.jpg') }}" class="img-fluid rounded-lg"
-                            alt="Pantai Madasari" style="object-fit: cover; height: 450px; width: 100%;">
-                    </a>
-                    <h5 class="fw-bold">Pantai Madasari</h5>
-                </div>
-
-                {{-- Item 2 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/pantai/pasir-putih.jpg') }}" class="img-fluid rounded-lg"
-                            alt="Pasir Putih" style="object-fit: cover; height: 450px; width: 100%;">
-                    </a>
-                    <h5 class="fw-bold">Pasir Putih</h5>
-                </div>
-            </div>
-
-            <div class="row justify-content-center g-5 mt-4">
-                {{-- Item 3 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/pantai/the-arwana-2.jpg') }}" class="img-fluid rounded-lg"
-                            alt="The Arnawa" style="object-fit: cover; height: 450px; width: 100%;">
-                    </a>
-                    <h5 class="fw-bold">The Arnawa</h5>
-                </div>
-
-                {{-- Item 4 --}}
-                <div class="col-12 col-md-6 col-lg-5 text-center">
-                    <a href="#" class="d-block mb-3">
-                        <img src="{{ asset('assets/images/pantai/Green-Canyon-3.jpg') }}" class="img-fluid rounded-lg"
-                            alt="Green Canyon" style="object-fit: cover; height: 450px; width: 100%;">
-                    </a>
-                    <h5 class="fw-bold">Green Canyon</h5>
-                </div>
+            <div class="row justify-content-center g-4">
+                @foreach ($gallerys as $gallery)
+                    <div class="col-12 col-md-6 col-lg-6 text-center">
+                        <a href="#" class="d-block mb-3">
+                            <img src="{{ asset('storage/' . $gallery->photo) }}" class="img-fluid rounded-lg fixed-img"
+                                alt="{{ $gallery->title }}">
+                        </a>
+                        <h5 class="fw-bold">{{ $gallery->title }}</h5>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
+
+
+
     @include('layouts.frontend.blue')
 @endsection

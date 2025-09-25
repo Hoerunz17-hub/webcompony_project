@@ -57,37 +57,50 @@
 
 
             <!-- Recent Orders start -->
-            <div class="col-sm-12">
+            <div class="col-sm-12 mt-4">
                 <div class="card table-card">
                     <div class="card-header">
-                        <h5>Aktivitas Terbaru</h5>
+                        <h5>Recent Login History</h5>
                     </div>
                     <div class="card-body p-0">
                         <div class="table-responsive">
-                            <table class="table">
-                                <tr>
-                                    <th>Nama Pengunjung</th>
-                                    <th>Destinasi</th>
-                                    <th>Ulasan Singkat</th>
-                                    <th>Tanggal Ulasan</th>
-                                    <th>Tipe Kunjungan</th>
-
-                                </tr>
-                                <tr>
-                                    <td>Sahroni</td>
-                                    <td>Cagar Alam</td>
-                                    <td>Disana Ada Banyak Berbagai satwa Liar </td>
-                                    <td>17-07-25</td>
-                                    <td>Keluarga</td>
-
-                                </tr>
-
-
+                            <table class="table table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Email</th>
+                                        <th>IP Address</th>
+                                        <th>Browser</th>
+                                        <th>OS</th>
+                                        <th>Login At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($loginHistories as $history)
+                                        @php
+                                            $agent = new Jenssegers\Agent\Agent();
+                                            $agent->setUserAgent($history->user_agent);
+                                        @endphp
+                                        <tr>
+                                            <td>{{ $history->user->name }}</td>
+                                            <td>{{ $history->user->email }}</td>
+                                            <td>{{ $history->ip_address }}</td>
+                                            <td>{{ $agent->browser() }} {{ $agent->version($agent->browser()) }}</td>
+                                            <td>{{ $agent->platform() }} {{ $agent->version($agent->platform()) }}</td>
+                                            <td>{{ $history->created_at->format('d-m-Y H:i') }}</td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Belum ada history login</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
 
