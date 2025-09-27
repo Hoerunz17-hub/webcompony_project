@@ -392,8 +392,8 @@
                             <h3 class="heading">Pages</h3>
                             <ul class="links list-unstyled">
                                 <li><a href="#">Blog</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -402,8 +402,8 @@
                             <h3 class="heading">Resources</h3>
                             <ul class="links list-unstyled">
                                 <li><a href="#">Blog</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
