@@ -87,7 +87,9 @@
                                             <td>{{ $history->ip_address }}</td>
                                             <td>{{ $agent->browser() }} {{ $agent->version($agent->browser()) }}</td>
                                             <td>{{ $agent->platform() }} {{ $agent->version($agent->platform()) }}</td>
-                                            <td>{{ $history->created_at->format('d-m-Y H:i') }}</td>
+                                            <td>{{ $history->created_at->timezone('Asia/Jakarta')->format('d-m-Y H:i') }}
+                                            </td>
+
                                         </tr>
                                     @empty
                                         <tr>

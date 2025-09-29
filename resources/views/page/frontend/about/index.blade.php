@@ -38,12 +38,19 @@
             <div class="row align-items-center">
                 <!-- Gambar -->
                 <div class="col-lg-7">
-                    <div class="owl-single dots-absolute owl-carousel">
-                        @foreach ($abouts as $item)
-                            <img src="{{ asset('storage/' . $item->photo) }}" alt="About Image"
-                                class="img-fluid rounded-20">
-                        @endforeach
-                    </div>
+                    @if ($abouts->count() > 1)
+                        {{-- Kalau lebih dari 1 data, pakai carousel --}}
+                        <div class="owl-single dots-absolute owl-carousel">
+                            @foreach ($abouts as $item)
+                                <img src="{{ asset('storage/' . $item->photo) }}" alt="About Image"
+                                    class="img-fluid rounded-20">
+                            @endforeach
+                        </div>
+                    @elseif($abouts->count() == 1)
+                        {{-- Kalau cuma 1 data, tampilkan biasa --}}
+                        <img src="{{ asset('storage/' . $abouts->first()->photo) }}" alt="About Image"
+                            class="img-fluid rounded-20">
+                    @endif
                 </div>
 
                 <!-- Deskripsi -->
@@ -64,8 +71,8 @@
                     </ul>
                 </div>
             </div>
-
         </div>
+
 
         <!-- END section about -->
 
@@ -165,3 +172,18 @@
 
         @include('layouts.frontend.blue')
     @endsection
+    @push('scripts')
+        <script>
+            $(document).ready(function() {
+                $('.owl-single').owlCarousel({
+                    items: 1,
+                    dots: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    loop: $('.owl-single img').length > 1 // loop hanya kalau gambar > 1
+                });
+            });
+        </script>
+    @endpush
