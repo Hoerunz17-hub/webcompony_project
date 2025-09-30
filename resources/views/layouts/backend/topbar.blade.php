@@ -14,11 +14,6 @@
                         <i class="ph ph-list"></i>
                     </a>
                 </li>
-                <li class="pc-h-item pc-sidebar-popup">
-                    <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
-                        <i class="ph ph-list"></i>
-                    </a>
-                </li>
 
             </ul>
         </div>
