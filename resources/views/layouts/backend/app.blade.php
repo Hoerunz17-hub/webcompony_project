@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{{ asset('assetsbackend/css/style.css') }}" id="main-style-link" />
     <link rel="stylesheet" href="{{ asset('assetsbackend/css/style-preset.css') }}" />
     <style>
-        .active-sidebar{
+        .active-sidebar {
             border-left: 4px solid #4099ff;
             background-color: #efefef !important;
         }
